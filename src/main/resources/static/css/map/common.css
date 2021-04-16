@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:14px/1.5 'Microsoft YaHei',tahoma,arial,\5b8b\4f53;color:#333;}
+h1,h2,h3,h4,h5,h6{font-size:100%;
+    font-weight:normal;}
+h1{font-family:"Microsoft YaHei";}
+em,i{font-style:normal;}
+fieldset,img{border:0;}
+img{vertical-align:top;}
+ul,ol{list-style:none;}
+a{text-decoration:none;outline:none;}
+a:focus{
+    outline: none;
+}
+body {
+    background: url("/staticFiles/assets/graybg.jpg") repeat !important;
+}
+.whitebg{
+    background: #fff !important;
+}
+.clear{clear:both;display:block;height:0;overflow:hidden;font-size:0;}
+button,input,select,textarea{font-size:100%;outline:none}
+table{border-collapse:collapse;border-spacing:0;bordercolor:#CCCCCC}
+.hide{display:none;}
+.block{display:block;}
+.fl{float:left;}
+.fr{float:right;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;zoom:1;}
+.clearfix{zoom:1;}
+.w1200{width:1200px;margin:0 auto;}
+/*自助投诉*/
+.selfServiceBtn {
+    width:74px;
+    height:74px;
+    background-color: #0293ED;
+    background: url(/staticFiles/assets/icon_zizhutousu.png) no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}

@@ -1,0 +1,2262 @@
+.courier-dialog {
+   overflow-x: hidden;
+   overflow-y: auto;
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 1050;
+   overflow: hidden;
+   outline: 0;
+ }
+ 
+ .courier-dialog-main {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   position: relative;
+   align-items: center;
+   justify-content: center;
+ }
+ .dialog-content {
+   width: 310px;
+   background: #fff;
+   height: 350px;
+   position: relative;
+   z-index: 10;
+ }
+ .dialog-content-title {
+   width: 100%;
+   height: 60px;
+   font-size: 20px;
+   background: #317ee7;
+   text-align: center;
+   line-height: 60px;
+   position: relative;
+   color: #fff;
+ }
+ 
+ .dialog-content-title-close {
+   position: absolute;
+   top: 0;
+   right: 0;
+   height: 20px;
+   line-height: 20px;
+   cursor: pointer;
+ }
+ .dialog-content-img {
+   height: 290px;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   justify-content: center;
+ }
+ .dialog-content-img >img{
+   width: 194px;
+   height: 194px;
+ }
+ 
+ .dialog-content-img-words {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   flex-wrap: wrap;
+   font-size: 16px;
+ }
+ .dialog-content-img-words img{
+   width: 20px;
+   height: 20px;
+ }
+ .dialog-content-img-words .wrap {
+   width: 100%;
+   text-align: center;
+   padding-top: 4px;
+   color: #ff7f02;
+ }
+ .dialog-mask {
+   position: absolute;
+   top:0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgba(0,0,0,.3);
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+ }
+ input,button {
+    outline: none;
+ }
+ 
+ li {
+    list-style: none;
+ }
+ 
+ #send-map {
+    height: 500px;
+    margin: auto;
+    position: relative;
+    background-image: url('https://cdn.kuaidi100.com/images/sz/courier_map.png');
+    border-bottom: 1px solid #d7d7d7;
+ }
+ 
+ #send-app-code {
+    margin: auto;
+    height: 600px;
+    background-position: center center;
+    text-align: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-image: url('https://cdn.kuaidi100.com/images/sz/courier_app.png')
+ }
+ 
+ #send-app-code h1 {
+    color: #fff;
+    margin: 95px 0 56px 0;
+    text-shadow: 0 0 8px rgba(0,0,0,.3);
+    font-weight: normal;
+    font-size: 36px;
+ }
+ 
+ #send-brief {
+    text-align: center;
+    padding: 48px 0;
+ }
+ 
+ #send-brief li {
+    display: inline-block;
+    color: #7e7e7e;
+    font-size: 16px;
+ }
+ 
+ #send-brief h3 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    font-weight: normal;
+    margin: 22px 0;
+    line-height: 1em;
+ }
+ 
+ .brief-img {
+    width: 182px;
+    height: 157px;
+    background: url(/images/sz/sz_sent_brief.png) 0 -23px no-repeat;
+ }
+ 
+ .brief-img2 {
+    background-position: -205px -23px;
+    margin-left: 10px;
+ }
+ 
+ .brief-img3 {
+    background-position: -410px -23px;
+    margin-left: 10px;
+ }
+ 
+ .sent-guide {
+    position: absolute;
+    background: rgba(46,68,98,.6);
+    border-radius: 10px;
+    right: 48px;
+    top: 66px;
+    z-index: 110;
+    color: #FFF;
+    width: 150px;
+    height: 215px;
+    font-size: 14px;
+    cursor: default;
+    overflow: hidden;
+ }
+ 
+ #sendGuide {
+    z-index: 96;
+    width: 1014px;
+    margin: 0 auto;
+ }
+ 
+ .sent-guide dt {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    text-align: center;
+    line-height: 45px;
+    margin-bottom: 16px;
+ }
+ 
+ .sent-guide dd,.sent-guide .dd {
+    margin-bottom: 12px;
+    padding-left: 8px;
+ }
+ 
+ .cursor {
+    cursor: pointer;
+ }
+ 
+ .cursor:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+ }
+ 
+ .sent-guide .dd {
+    line-height: 45px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    margin-bottom: 0;
+ }
+ 
+ .sent-guide i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+    background: url(/images/sz/sz_icon.png) #FFF;
+    border-radius: 50%;
+ }
+ 
+ i.dingwei {
+    background-position: -80px -673px;
+ }
+ 
+ i.chazhao {
+    background-position: -30px -673px;
+ }
+ 
+ i.saoma {
+    background-position: -57px -673px;
+ }
+ 
+ i.kefu {
+    border-radius: 0;
+    background-color: transparent;
+    background-position: -112px -678px;
+ }
+ 
+ .guide-control,.guide-kefu {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    background: rgba(46,68,98,.6);
+    top: 158px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 110;
+    background-image: url(/images/sz/sz_icon.png);
+    background-position: 6px -697px;
+ }
+ 
+ .guide-control.expand {
+    background-position: 6px -669px;
+ }
+ 
+ .guide-kefu {
+    display: none;
+    background-position: -109px -675px;
+    top: 22px;
+    right: 10px;
+    border-bottom: 1px solid rgba(255,255,255,.8)
+ }
+ 
+ .search-bar {
+    position: absolute;
+    z-index: 97;
+    background: rgba(0,0,0,.3);
+    margin: 0 auto;
+    top: 358px;
+    left: 50%;
+    width: 1184px;
+    margin-left: -592px;
+    padding: 10px;
+    font-size: 16px;
+ }
+ 
+ .search-bar label {
+    font-size: 20px;
+    color: #FFF;
+    padding-right: 10px;
+ }
+ 
+ .search-bar .input-wrap {
+    display: inline-block;
+    width: 456px;
+    background: #fff;
+    border: 1px solid #a7a7a7;
+    vertical-align: middle;
+ }
+ 
+ .search-bar input {
+    padding: 0;
+    width: 340px;
+    height: 58px;
+    line-height: 58px;
+    border: none;
+    font-size: 16px;
+ }
+ 
+ .search-bar .input-wrap span {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    width: 58px;
+    line-height: 58px;
+    height: 60px;
+    border-right: 1px solid #d5d5d5;
+    overflow: hidden;
+    vertical-align: top;
+ }
+ 
+ .search-bar .input-wrap span:after {
+    content: '';
+    position: absolute;
+    right: 6px;
+    top: 28px;
+    border-top: 5px solid #d0d0d0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    z-index: 16;
+ }
+ 
+ .search-btn {
+    height: 60px;
+    width: 172px;
+    border: none;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    background-image: url(https://cdn.kuaidi100.com/images/sz/sz_icon.png);
+    background-position: 23px -278px;
+    background-repeat: no-repeat;
+    word-spacing: 5px;
+    font-size: 18px;
+    margin-left: 8px;
+    vertical-align: middle;
+ }
+ 
+ .tips {
+    position: absolute;
+    left: 0;
+    width: 1182px;
+ }
+ 
+ .search-result {
+    position: relative;
+    width: 1200px;
+    margin: 10px auto 0;
+    border-top: 1px solid transparent;
+    min-height: 600px;
+ }
+ 
+ .search-result h1 {
+    font-size: 24px;
+    color: #333;
+    font-weight: normal;
+    padding: 10px 0 30px;
+ }
+ 
+ .filter {
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 2em;
+ }
+ 
+ .filter span {
+    margin-right: 25px;
+    cursor: pointer;
+ }
+ 
+ .filter .more,.com-select-wrap .select {
+    font-weight: normal;
+    margin-left: 25px;
+    cursor: pointer;
+ }
+ 
+ .filter .more:after,.com-select-wrap .select:after {
+    display: inline-block;
+    width: 16px;
+    height: 9px;
+    content: '';
+    background: url(https://cdn.kuaidi100.com/images/sz/sz_icon.png?version=20170823) -9px -1244px;
+ }
+ 
+ .com-select-wrap {
+    height: 35px;
+    width: auto;
+    line-height: 35px;
+ }
+ 
+ .com-select-wrap ul {
+    border: 1px solid #d5d5d5;
+    padding: 10px;
+    position: absolute;
+    width: 200px;
+    background: #fff;
+    display: none;
+ }
+ 
+ .com-select-wrap li {
+    cursor: pointer;
+ }
+ 
+ .com-select-wrap li:hover {
+    opacity: .8;
+    filter: alpha(opacity=80);
+ }
+ 
+ .filter .more:hover:after,.com-select-wrap .select:hover:after {
+    background-position: -33px -1244px;
+ }
+ 
+ .filter span.active,.filter li.active {
+    color: #488dec;
+ }
+ 
+ .filter span:hover {
+    color: #488dec;
+ }
+ 
+ .filter .weight {
+    width: 1132px;
+    height: 35px;
+ }
+ 
+ .filter .weight input {
+    width: 55px;
+    height: 26px;
+    color: #878787;
+    padding-right: 8px;
+    margin: 0 5px;
+    text-align: right;
+ }
+ 
+ .filter .weight .unit {
+    color: #878787;
+ }
+ 
+ .com-list-wrap,.com-select-wrap {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    vertical-align: middle;
+    margin-left: -30px;
+ }
+ 
+ .com-list {
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #d5d5d5;
+    padding: 10px;
+    background: #fff;
+    z-index: 10;
+    display: none;
+ }
+ 
+ .com-list li {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+ }
+ 
+ .com-list li:hover {
+    color: #488dec;
+ }
+ 
+ .search-result h3 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color: #333;
+    font-weight: normal;
+ }
+ 
+ .search-card {
+    position: relative;
+    margin-bottom: 60px;
+    color: #5c5c5c;
+    font-size: 14px;
+    margin-top: 26px;
+ }
+ 
+ .search-card >ul > li {
+    position: relative;
+    margin-bottom: 30px;
+ }
+ 
+ .search-card > .full > li {
+    display: block;
+ }
+ 
+ .search-card  .full .card-info {
+    cursor: default;
+    display: inline-block;
+    border-right: none;
+ }
+ 
+ .search-card  .full.full-hide .card-info {
+    border-right: 1px solid #d5d5d5;
+    cursor: pointer;
+ }
+ 
+ .search-card .active .card-info {
+    border-right: 1px solid #d5d5d5;
+ }
+ 
+ .search-card .active .card-info:before {
+    position: absolute;
+    top: -10px;
+    bottom: -11px;
+    left: -18px;
+    right: -10px;
+    background: #f3f8fe;
+    content: '';
+    z-index: -1;
+    border-radius: 4px;
+ }
+ 
+ .search-card .active .card-info:after {
+    position: absolute;
+    right: -19px;
+    top: 125px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #bcd7fd;
+    content: '';
+ }
+ 
+ .search-card .card-info {
+    position: relative;
+    padding: 24px 7px 16px 16px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    width: 440px;
+    border: 1px solid #d5d5d5;
+    border-left: 8px solid #488dec;
+    border-radius: 5px;
+    height: 186px;
+    vertical-align: top;
+    background-color: #fff;
+ }
+ 
+ .card-info h4 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+    margin-top: 5px;
+    height: 1.2em;
+    width: 288px;
+    overflow: hidden;
+ }
+ 
+ .card-info .avatar {
+    display: inline-block;
+    vertical-align: middle;
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 1px solid #f2f2f2;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(https://cdn.kuaidi100.com/images/sz/pic_nor.png);
+ }
+ 
+ .card-info .title {
+    display: inline-block;
+    vertical-align: middle;
+ }
+ 
+ .card-info .info label {
+    color: #333;
+    font-weight: bold;
+ }
+ 
+ .card-info .comlist img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #f1f1f1;
+    margin-right: 10px;
+ }
+ 
+ .card-info .comlist .more-com {
+    cursor: pointer;
+ }
+ 
+ .card-info .star i {
+    color: #fed631;
+    font-style: normal;
+    font-size: 20px;
+ }
+ 
+ .card-info .star {
+    display: inline-block;
+ }
+ 
+ .full .card-info .star {
+    border-bottom: 1px dotted #488dec;
+    cursor: pointer;
+ }
+ 
+ .card-info .time,.card-info .address {
+    padding-left: 24px;
+    background: url(https://cdn.kuaidi100.com/images/sz/sz_icon.png?version=201709121415) -11px -1062px no-repeat;
+ }
+ 
+ .card-info .address {
+    background-position: -8px -1164px;
+ }
+ 
+ .card-info .info {
+    width: 290px;
+    margin-top: 20px;
+ }
+ 
+ .card-info .info.courier {
+    margin-top: 80px;
+ }
+ 
+ .search-card .thelast {
+    position: absolute;
+    left: -32px;
+    top: 14px;
+    background: url(https://cdn.kuaidi100.com/images/sz/sz_icon.png?version=201707311200) 5px -806px no-repeat #eee;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(168,168,165,.3) inset;
+    width: 32px;
+    height: 220px;
+    box-sizing: border-box;
+    line-height: 1.4em;
+    font-size: 14px;
+    padding: 35px 8px 0px;
+ }
+ 
+ .search-card .name,.search-card .cour-name {
+    font-size: 18px;
+    color: #333;
+ }
+ 
+ .search-card .cour-name,.search-card .cour-com {
+    line-height: 30px;
+ }
+ 
+ .search-card .info > div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 260px;
+ }
+ 
+ .search-card .qr-code {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    width: 140px;
+    width: 120px;
+    height: 144px;
+    padding: 10px;
+ }
+ 
+ .search-card .qr-code img {
+    width: 120px;
+ }
+ 
+ .search-card .qr-code span {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 8px;
+    color: #bebebe;
+ }
+ 
+ .search-card .trans-icon i {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    margin-right: 12px;
+    margin-bottom: 5px;
+    vertical-align: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+ 
+ .card-detail {
+    display: inline-block;
+    width: 604px;
+    height: 190px;
+    padding: 20px 0 18px 26px;
+    border: 1px solid #d5d5d5;
+    border-left: 1px dashed #d5d5d5;
+ }
+ 
+ .card-detail-text {
+    height: 175px;
+    overflow: hidden;
+ }
+ 
+ .card-detail:before,.card-detail:after,.dispatch:before,.dispatch:after {
+    position: absolute;
+    left: 464px;
+    width: 20px;
+    height: 20px;
+    background: url(https://cdn.kuaidi100.com/images/sz/sz_icon.png?version=201708211430) -36px -1501px no-repeat;
+    content: '';
+    z-index: 6;
+ }
+ 
+ .card-detail:before,.dispatch:before {
+    top: 0;
+ }
+ 
+ .card-detail:after,.dispatch:after {
+    background-position: -10px -1490px;
+    bottom: 0;
+ }
+ 
+ .card-detail h4 {
+    font-weight: 900;
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 18px;
+ }
+ 
+ .taglist {
+    padding: 6px;
+    position: absolute;
+    width: 620px;
+    bottom: 0;
+    right: 95px;
+    height: 45px;
+    border-top: 1px dashed #e2e2e2;
+ }
+ 
+ .taglist span {
+    float: right;
+    color: #fd7f24;
+    border: 1px solid #fd7f24;
+    padding: 0 .6em;
+    width: 75px;
+    border-radius: 2px;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+ }
+ 
+ .taglist strong,.dispatch-detail .nounce {
+    display: inline-block;
+    padding-left: 38px;
+    vertical-align: middle;
+    background: url(https://cdn.kuaidi100.com/images/sz/sz_icon.png?version=20190520100) -116px -1578px no-repeat;
+ }
+ 
+ .card-detail .nounce {
+    display: block;
+    height: 45px;
+    overflow: hidden;
+    color: #ff7f02;
+ }
+ 
+ .card-detail .nounce:after {
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    height: 100%;
+ }
+ 
+ .card-detail .area-set {
+    position: absolute;
+    right: 94px;
+    top: 0;
+    padding: 4px 5px;
+    color: #fff;
+    background-color: #488dec;
+    font-size: 12px;
+ }
+ 
+ .dispatch {
+    position: relative;
+    margin-bottom: 34px;
+    font-size: 0;
+ }
+ 
+ .dispatch .dispatch-info {
+    display: inline-block;
+    padding: 24px 7px 16px 16px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 452px;
+    border: 1px solid #d5d5d5;
+    border-right: 0;
+    border-radius: 8px;
+    height: 186px;
+    vertical-align: top;
+    background-color: #fff;
+    background-image: url(https://cdn.kuaidi100.com/images/sz/dispatch.png);
+ }
+ 
+ .dispatch .dispatch-info:after {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+ }
+ 
+ .dispatch .avatar {
+    display: inline-block;
+    vertical-align: middle;
+    width: 88px;
+    height: 88px;
+    margin-right: 12px;
+    border: 4px solid rgba(255,255,255,.5);
+    border-radius: 50%;
+    background: url(https://cdn.kuaidi100.com/images/wxapp/kuaidi100/ico/icoKuaidi100Courier.png) left top no-repeat;
+    background-size: 100%;
+ }
+ 
+ .dispatch  .text {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFF;
+ }
+ 
+ .dispatch  .text .name {
+    color: #fff;
+    font-size: 22px;
+ }
+ 
+ .dispatch  .text  p {
+    opacity: .8;
+    font-size: 14px;
+    line-height: 2.5em;
+ }
+ 
+ .dispatch  .tag span {
+    display: inline-block;
+    margin-right: 1px;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 0 6px;
+ }
+ 
+ .dispatch .dispatch-detail {
+    position: relative;
+    display: inline-block;
+    width: 632px;
+    height: 226px;
+    border: 1px solid #d5d5d5;
+    border-left: none;
+ }
+ 
+ .dispatch-detail .qrcode {
+    padding-top: 10px;
+    text-align: center;
+ }
+ 
+ .dispatch-detail .nounce {
+    position: absolute;
+    width: 594px;
+    line-height: 45px;
+    bottom: 0;
+    left: 0;
+    border-top: 1px dashed #e2e2e2;
+    color: #ff7f02;
+    background-position: -116px -1566px;
+    font-size: 15px;
+ }
+ 
+ .area-weight input {
+    text-align: right;
+    padding-right: 5px;
+ }
+ 
+ .dispatch-detail .qrcode img {
+    width: 144px;
+    height: 144px;
+ }
+ 
+ .dispatch-detail .qrcode img + span {
+    display: block;
+    color: #bebebe;
+    font-size: 14px;
+    margin-top: 3px;
+ }
+ 
+ .area-addr {
+    border-bottom: 1px dotted #d5d5d5;
+    cursor: pointer;
+ }
+ 
+ .area-set input {
+    width: 30px;
+    height: 15px;
+    margin: 0 5px;
+ }
+ 
+ .time-price-container .area-set {
+    background: #f4f4f4;
+ }
+ 
+ .time-price-container .area-set .area-addr {
+    font-size: 16px;
+ }
+ 
+ .time-price-container .area-set .area-weight {
+    color: #888;
+ }
+ 
+ .time-price-warn {
+    position: absolute;
+    top: 44px;
+    right: 0;
+    left: 250px;
+    bottom: 0;
+    background: #FFF;
+    color: #fd7f24;
+    border-left: 1px solid #e2e2e2;
+    display: none;
+ }
+ 
+ .time-price-warn span {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 1px 10px;
+ }
+ 
+ .time-price-warn:after {
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+    display: inline-block;
+ }
+ 
+ .shop-detail {
+    width: 472px;
+    margin-top: -18px;
+    border: 1px solid #e2e2e2;
+ }
+ 
+ .detail-header {
+    background: #488dec;
+    color: #fff;
+    padding: 20px 26px;
+    position: relative;
+    margin-top: 10px;
+ }
+ 
+ .detail-header h3 {
+    font-size: 22px;
+    color: #FFF;
+    font-weight: lighter;
+    margin-bottom: 16px;
+ }
+ 
+ .detail-header .phone {
+    float: right;
+    background: url(https://cdn.kuaidi100.com/images/sz/sz_icon.png?version=20170821) -130px -812px no-repeat;
+    padding-left: 25px;
+ }
+ 
+ .detail-header .avatar,.detail-header .info {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+ }
+ 
+ .detail-header .info {
+    width: 434px;
+ }
+ 
+ .detail-header .name {
+    font-size: 22px;
+ }
+ 
+ .detail-content {
+    border: 1px solid #e2e2e2;
+ }
+ 
+ .service-img-list {
+    height: 195px;
+    padding: 5px 0;
+ }
+ 
+ .service-img-list .img {
+    position: relative;
+    margin-left: 6px;
+    float: left;
+    width: 146px;
+    border: 1px solid #dedede;
+ }
+ 
+ .service-img-list img {
+    width: 100%;
+ }
+ 
+ .service-img-list p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #000;
+    background: rgba(0,0,0,.5);
+    font-size: 12px;
+    color: #FFF;
+ }
+ 
+ .brand-list {
+    border-bottom: 1px solid #317ee7;
+    border-top: none;
+    font-size: 0;
+ }
+ 
+ .brand-list span {
+    display: inline-block;
+    border-right: 1px solid #e7e7e7;
+    color: #333;
+    padding: .2em .8em;
+    font-size: 14px;
+    vertical-align: bottom;
+    cursor: pointer;
+ }
+ 
+ .brand-list span.active {
+    background: #317ee7;
+    color: #FFF;
+ }
+ 
+ .time-price-wrap {
+    position: relative;
+    height: 128px;
+    overflow: hidden;
+    margin-top: 15px;
+    overflow-y: auto;
+    overflow: auto\9;
+ }
+ 
+ .time-price-container {
+    position: relative;
+ }
+ 
+ .time-price {
+    color: #333;
+    width: 100%;
+    font-size: 14px;
+ }
+ 
+ .time-price th {
+    font-size: 12px;
+    background: #f4f4f4;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #333;
+    font-weight: normal;
+ }
+ 
+ .time-price-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 301px;
+    z-index: 10;
+    background: #fff;
+    right: 0;
+    padding-top: 34px;
+    text-align: center;
+    color: #f71d1d;
+    display: none;
+ }
+ 
+ .time-price-tip {
+    text-align: center;
+    padding: 10px 0;
+    color: #488dec;
+    border-top: 1px solid #d5d5d5;
+    cursor: pointer;
+ }
+ 
+ .time-price td {
+    position: relative;
+    border-bottom: 1px dashed #e2e2e2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+ }
+ 
+ .card-detail .time-price td {
+    border: none;
+    padding-left: 0;
+    padding-top: 0;
+ }
+ 
+ .th1,.td1 {
+    width: 214px;
+    padding-left: 25px;
+ }
+ 
+ .th2,.td2 {
+    text-align: center;
+ }
+ 
+ .th3,.td3 {
+    width: 120px;
+ }
+ 
+ .td4 {
+    width: 30px;
+    padding-left: 20px;
+    color: #ff1f00;
+    background: url(https://cdn.kuaidi100.com/images/sz/sz_icon.png?version=017091216) -133px -517px no-repeat;
+    padding-right: 4px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+ }
+ 
+ .card-detail .time-price .td4 {
+    padding-left: 20px;
+    background-position: -133px -527px;
+ }
+ 
+ .th3 input {
+    width: 40px;
+    padding-right: 2px;
+    height: 16px;
+    margin: 0 4px;
+    color: #888;
+    text-align: right;
+    outline: none;
+    border: 1px solid #e2e2e2;
+ }
+ 
+ .time-price strong {
+    font-weight: 900;
+    display: inline-block;
+    width: 97px;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+ }
+ 
+ .time-price td img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 1px solid #d5d5d5;
+ }
+ 
+ .time-price td button {
+    float: right;
+    background: #fd7f24;
+    color: #fff;
+    width: 80px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+ }
+ 
+ .time-price td button:hover {
+    opacity: .8;
+    filter: alpha(opacity=80);
+ }
+ 
+ .time-price td.td2 button {
+    float: none;
+ }
+ 
+ .time-price-ctrl {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+ }
+ 
+ .time-price-ctrl i {
+    cursor: pointer;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(https://cdn.kuaidi100.com/images/sz/sz_icon.png?version=201708211430);
+ }
+ 
+ .time-price-ctrl .up {
+    background-position: -94px -1242px;
+ }
+ 
+ .time-price-ctrl .down {
+    background-position: -128px -1242px;
+    margin-top: 10px;
+ }
+ 
+ .comment {
+    background: #FFF;
+ }
+ 
+ .comment h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #F4F4F4;
+    line-height: 2em;
+    font-size: 14px;
+    padding-left: 30px;
+ }
+ 
+ .comment .head {
+    padding: 6px 0;
+    border-bottom: 1px dashed #e2e2e2;
+ }
+ 
+ .comment .head img {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #f1f1f1;
+    border-radius: 50%;
+    margin-right: 5px;
+ }
+ 
+ .comment .score {
+    float: right;
+ }
+ 
+ .comment .score i {
+    color: #fed631;
+    font-style: normal;
+    font-size: 16px;
+ }
+ 
+ .comment .body {
+    padding: 10px 0;
+    color: #666;
+ }
+ 
+ .comment ul {
+    height: 262px;
+    overflow-y: hidden;
+    position: relative;
+ }
+ 
+ .comment ul.show {
+    overflow-y: scroll;
+    overflow: scroll\9;
+ }
+ 
+ .comment li.load {
+    text-align: center;
+    color: #488dec;
+    padding: 10px;
+    border: none;
+ }
+ 
+ .comment li.empty {
+    text-align: center;
+    border: none;
+    padding: 10px;
+ }
+ 
+ .comment ul::-webkit-scrollbar,.time-price-wrap::-webkit-scrollbar {
+    width: 8px;
+    height: 1000px;
+    background: #f2f2f2;
+    border: none;
+ }
+ 
+ .comment ul::-webkit-scrollbar-button,.time-price-wrap::-webkit-scrollbar-button {
+    display: none;
+ }
+ 
+ .comment ul::-webkit-scrollbar-track,.time-price-wrap::-webkit-scrollbar-track {
+    display: none;
+ }
+ 
+ .comment ul::-webkit-scrollbar-track-piece,.time-price-wrap::-webkit-scrollbar-track-piece {
+    background: #f4f4f4;
+ }
+ 
+ .comment ul::-webkit-scrollbar-thumb,.time-price-wrap::-webkit-scrollbar-thumb {
+    background: #d5d5d5;
+ }
+ 
+ .comment ul::-webkit-scrollbar-corner,.comment ul::-webkit-resizer,.time-price-wrap::-webkit-scrollbar-corner,.time-price-wrap::-webkit-resizer {
+    display: none;
+ }
+ 
+ .comment li {
+    border-bottom: 5px solid #f4f4f4;
+    padding: 0 25px;
+ }
+ 
+ .comment .view-more {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+ }
+ 
+ .full .comment {
+    display: none;
+    position: absolute;
+    top: -40px;
+    left: 90px;
+    z-index: 15;
+    width: 440px;
+    border: 1px solid #d5d5d5;
+    box-shadow: 0 2px 4px #d5d5d5;
+    border-radius: 5px;
+ }
+ 
+ .full .comment h3 {
+    margin-top: 0;
+ }
+ 
+ .full .comment:before {
+    position: absolute;
+    left: -8px;
+    width: 10px;
+    height: 20px;
+    content: '';
+    top: 127px;
+    background: url(https://cdn.kuaidi100.com/images/sz/sz_icon.png?version=201708211640) -142px -1497px;
+ }
+ 
+ .full .comment:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -30px;
+    width: 30px;
+    content: '';
+ }
+ 
+ #send-join {
+    display: none;
+    padding-left: 90px;
+ }
+ 
+ .result-tips {
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #888;
+    width: 368px;
+    margin-top: 26px;
+ }
+ 
+ .wrap-gray {
+    background: #f7f8fa;
+    padding: 26px 0;
+ }
+ 
+ .location-box {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    z-index: 111;
+    width: 250px;
+    font-size: 12px;
+    overflow: hidden;
+    background-color: #FFF;
+    color: #5a5a5a;
+    border: 1px solid #d2d2d2;
+ }
+ 
+ .location-box-city {
+    position: absolute;
+    left: 50%;
+    margin-left: -632px;
+    bottom: 75px;
+    z-index: 111;
+    width: 245px;
+    font-size: 12px;
+    overflow: hidden;
+    background-color: #FFF;
+    color: #5a5a5a;
+    border: 1px solid #d2d2d2;
+ }
+ 
+ #startPlaceDiv {
+    display: none;
+    bottom: 0;
+    z-index: 99999;
+    top: auto;
+    left: 50%;
+    margin-left: -546px;
+ }
+ 
+ #endPlaceDiv {
+    display: none;
+    bottom: 0;
+    z-index: 99999;
+    top: auto;
+    left: 50%;
+    margin-left: -50px;
+ }
+ 
+ .col_1 {
+    float: left;
+    width: 650px;
+    padding-bottom: 10px;
+ }
+ 
+ .col_2 {
+    float: right;
+    width: 300px;
+ }
+ 
+ .market-point {
+    background: url('data:image/png;base64,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') center no-repeat;
+    background-size: 40px 50px;
+    height: 50px;
+    width: 40px;
+    z-index: 99;
+ }
+ 
+ .market-point .market-name {
+    background: #488dec;
+    color: #Fff;
+    position: absolute;
+    line-height: 20px;
+    font-size: 12px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    padding: 0 5px;
+    white-space: nowrap;
+ }
+ 
+ .market-point img {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    border-radius: 50%;
+ }
+ 
+ .no-result {
+    background: url("https://cdn.kuaidi100.com/images/sz/sad.png") center top no-repeat;
+    width: 100%;
+    padding-top: 140px;
+    font-size: 16px;
+    color: #888888;
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+ }
+ 
+ .no-result .content {
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 50px;
+    line-height: 1.8em;
+ }
+ 
+ .no-result strong {
+    color: red;
+    display: inline-block;
+    text-overflow: ellipsis;
+    max-width: 17em;
+    overflow: hidden;
+    vertical-align: middle;
+    height: 1.8em;
+ }
+ 
+ input[type=number] {
+    -moz-appearance: textfield;
+ }
+ 
+ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+ }
+ 
+ .all-com {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    background: #FFF;
+    width: 384px;
+ }
+ 
+ .all-com h3 {
+    color: #333;
+    font-size: 16px;
+    line-height: 44px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: normal;
+ }
+ 
+ .all-com .content {
+    padding: 23px 10px 12px;
+    text-align: left;
+ }
+ 
+ .all-com .content img {
+    width: 28px;
+    height: 28px;
+    margin-left: 16px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+ }
+ 
+ .all-com .close-mask {
+    position: absolute;
+    z-index: 2;
+    height: 22px;
+    width: 22px;
+    right: 10px;
+    top: 12px;
+    background: url(/images/spider_search_v4.png) no-repeat 3px -1283px;
+    cursor: pointer;
+ }
+ 
+ .all-com .close-mask:hover {
+    background: url(/images/spider_search_v4.png) no-repeat -33px -1283px;
+ }
+ 
+ .custom-window-title {
+    font-size: 14px;
+    color: #333;
+    font-weight: normal;
+ }
+ 
+ .custom-window-title em {
+    font-style: normal;
+    font-size: 16px;
+    padding: 0 6px;
+ }
+ 
+ .custom-window-address {
+    font-size: 14px;
+    color: #a7a7a7;
+    padding: 5px 0;
+ }
+ 
+ .custom-window-info {
+    font-size: 14px;
+ }
+ 
+ .amap-info-content {
+    border-radius: 3px;
+    box-shadow: 0 0 4px rgba(0,0,0,.3);
+    border: none;
+    padding: 10px 16px 10px 10px;
+ }
+ 
+ .amap-info-content:hover {
+    box-shadow: 0 0 6px rgba(0,0,0,.3);
+ }
+ 
+ .amap-info-sharp {
+    margin: 0 auto;
+    width: 0;
+    height: 0 !important;
+    border-top: 8px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    background: none;
+    top: -1px;
+    filter: drop-shadow(0 0 1px rgba(0,0,0,.4))
+ }
+ 
+ .amap-overlays {
+    z-index: 95;
+ }
+ 
+ .global-loading {
+    position: relative;
+    margin: 60px auto;
+    display: none;
+ }
+ 
+ .global-loading span {
+    position: absolute;
+    top: 68px;
+    left: -30px;
+    white-space: nowrap;
+    color: #3278e6;
+    font-size: 16px;
+ }
+ .new-loading {
+   text-align: center;
+ }
+ .new-loading img {
+   width: 200px;
+ }
+ .new-loading p {
+   color: #bbb;
+   font-size: 16px;
+ }
+ 
+ .card-info .info p {
+    max-height: 42px;
+    overflow: hidden;
+ }
+ 
+ .cour-join {
+    float: right;
+    margin-top: 60px;
+    position: relative;
+    z-index: 15;
+ }
+ 
+ .order {
+    position: relative;
+    float: right;
+    margin-left: -695px;
+    width: 708px;
+    border: 1px solid #d5d5d5;
+    background: #fff;
+    z-index: 15;
+    display: none;
+ }
+ 
+ .order h2 {
+    color: #fff;
+    background: #488dec;
+    padding: 20px;
+    font-size: 22px;
+ }
+ 
+ .order h2 span {
+    float: right;
+    font-size: .8em;
+ }
+ 
+ .addr-info,.pack-info,.com-info {
+    padding: 25px;
+ }
+ 
+ .addr-info {
+    border-bottom: 1px dashed #d2d2d2;
+ }
+ 
+ .addr-info h3,.pack-info h3 {
+    font-size: 16px;
+    margin-bottom: 0;
+    font-weight: 900;
+ }
+ 
+ .addr-info h3 a,.pack-info h3 a {
+    font-size: 12px;
+    line-height: 30px;
+    margin-left: 30px;
+    padding: 10px 30px;
+    font-weight: normal;
+ }
+ 
+ .com-info {
+    font-size: 14px;
+    padding-bottom: 15px;
+ }
+ 
+ .com-info label {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: 900;
+    margin-right: 25px;
+ }
+ 
+ .com-info img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 12px;
+    border: 1px solid #d5d5d5;
+    border-radius: 50%;
+ }
+ 
+ .com-info .back {
+    float: right;
+    padding-left: 16px;
+    color: #488dec;
+    background: url(https://cdn.kuaidi100.com/images/sz/sz_icon.png?version=20170829) -140px -1544px no-repeat;
+    cursor: pointer;
+ }
+ 
+ .com-info .back:hover {
+    opacity: .8;
+    filter: alpha(opacity=80);
+ }
+ 
+ .a-paste {
+    background: url(//cdn.kuaidi100.com/images/user/history/ico_his.png) -10px -1856px no-repeat
+ }
+ 
+ .a-addr {
+    background: url(//cdn.kuaidi100.com/images/user/history/ico_his.png) -10px -908px no-repeat;
+ }
+ 
+ .addr-content {
+    padding: 20px 0 0;
+ }
+ 
+ .form {
+    display: table;
+    font-size: 0;
+    margin-bottom: 10px;
+ }
+ 
+ .form.hidden {
+    display: none;
+ }
+ 
+ label {
+    font-size: 16px;
+    vertical-align: middle;
+ }
+ 
+ input[type=radio] +label {
+    margin-right: 20px;
+    text-align: left;
+ }
+ 
+ .form >label {
+    display: table-cell;
+    width: 5em;
+    color: #000;
+    padding-right: 10px;
+    text-align: right;
+    font-size: 14px;
+    vertical-align: middle;
+ }
+ 
+ .form>span {
+    display: table-cell;
+    vertical-align: middle;
+ }
+ 
+ .form> textarea + span {
+    display: block;
+ }
+ 
+ .form input[type=text] {
+    width: 200px;
+    border: 1px solid #d2d2d2;
+    margin: 0;
+    font-size: 14px;
+    text-indent: 1em;
+    height: 30px;
+    outline: none;
+ }
+ 
+ .form input.long {
+    width: 230px;
+    border-left: none;
+ }
+ 
+ .input-group a {
+    color: #3278e6;
+    font-size: 14px;
+    padding-left: 10px;
+    line-height: 34px;
+    display: inline-block;
+    vertical-align: middle;
+ }
+ 
+ .pd25 {
+    padding: 25px;
+ }
+ 
+ .form textarea {
+    height: 150px;
+    resize: none;
+    padding: 15px;
+    outline: none;
+    width: 545px;
+    border: 1px solid #d2d2d2;
+    font-size: 16px;
+ }
+ 
+ .text {
+    font-size: 16px;
+    line-height: 1.5em;
+ }
+ 
+ .danger {
+    font-size: 12px !important;
+    color: #FF0156 !important;
+    padding-left: 1em;
+ }
+ 
+ .danger-text {
+    color: #FF0156;
+ }
+ 
+ #sendTips {
+    text-align: center;
+    font-size: 14px;
+    color: #ff0156;
+ }
+ 
+ .tip {
+    color: #fd7822;
+    font-size: 16px;
+    padding-left: 50px;
+    line-height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-top: 10px;
+    background: url(//cdn.kuaidi100.com/images/nounce.png) 16px no-repeat;
+ }
+ 
+ .order-btn-wrap {
+    padding: 25px;
+    text-align: center;
+ }
+ 
+ .order-btn {
+    width: 430px;
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+ }
+ 
+ .order-btn.disabled {
+    background: #d2d2d2;
+ }
+ 
+ #addSendProvince {
+    top: -11px;
+    left: 80px;
+    width: 260px;
+ }
+ 
+ #addRecProvince {
+    top: -11px;
+    left: 80px;
+    width: 260px;
+ }
+ 
+ .frame {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    z-index: 98;
+ }
+ 
+ .login-frame {
+    margin-left: -10rem;
+    margin-top: -12rem;
+    width: 20rem;
+    height: 24rem;
+ }
+ 
+ .frame-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    background-color: #fff;
+    border: 1px solid #bbb;
+ }
+ 
+ .frame-close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    -webkit-transform: rotate(45deg);
+ }
+ 
+ .frame-close-btn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    width: 0;
+    height: 1.125rem;
+    border-right: 0.125rem solid #999;
+ }
+ 
+ .frame-close-btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    width: 1.125rem;
+    height: 0;
+    border-top: 0.125rem solid #999;
+ }
+ 
+ .float-box {
+    z-index: 162;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+ 
+ .float-body {
+    position: absolute;
+    z-index: 104;
+    width: 700px;
+    height: 580px;
+    background-color: #fff;
+    left: 50%;
+    margin-left: -350px;
+    top: 20px;
+ }
+ 
+ .float-body h4 {
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    color: #fff;
+    background-color: #4890f0;
+ }
+ 
+ .float-body a.a-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background: url("//cdn.kuaidi100.com/images/user/history/ico_his.png") -12px -1012px no-repeat;
+ }
+ 
+ .float-bg {
+    position: absolute;
+    z-index: 103;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+ }
+ 
+ .addrbook-box p {
+    margin: 0 auto;
+    padding: 25px 0;
+    width: 600px;
+ }
+ 
+ .addrbook-box p label {
+    display: inline-block;
+    width: 70px;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    background-color: #3278e6;
+ }
+ 
+ .addrbook-box p input.inp-search {
+    padding: 4px 8px;
+    padding-right: 30px;
+    width: 310px;
+    height: 18px;
+    line-height: 18px;
+    color: #000;
+    border: 1px solid #c8c8c8;
+ }
+ 
+ .addrbook-box p a.a-search,.addrbook-box p a.a-clear {
+    display: inline-block;
+    margin-left: -35px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    background: url("//cdn.kuaidi100.com/images/user/history/ico_his.png") -10px -159px no-repeat;
+ }
+ 
+ .addrbook-box p a.a-clear {
+    background-position: -9px -809px;
+ }
+ 
+ .addrbook-box table {
+    width: 100%;
+ }
+ 
+ .addrbook-box td {
+    padding: 8px 0;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+ }
+ 
+ .addrbook-box td.col1 {
+    padding-left: 60px;
+    width: 190px;
+ }
+ 
+ .addrbook-box td.col2 {
+    width: 330px;
+ }
+ 
+ .addrbook-box td span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+ }
+ 
+ .addrbook-box td.col2 span {
+    padding-right: 10px;
+    width: 320px;
+ }
+ 
+ .addrbook-box td span.col {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+ }
+ 
+ .addrbook-box td span.row {
+    width: auto;
+ }
+ 
+ .addrbook-box td span.img-head {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 25px;
+ }
+ 
+ .addrbook-box a {
+    vertical-align: middle;
+ }
+ 
+ .addrbook-box a.a-setting {
+    padding-left: 25px;
+    background: url("//cdn.kuaidi100.com/images/user/history/ico_his.png") -13px -1062px no-repeat;
+ }
+ 
+ .addrbook-box a.a-page {
+    display: inline-block;
+    width: 24px;
+    height: 18px;
+    overflow: hidden;
+    text-indent: -65535px;
+    border: 1px solid #c8c8c8;
+    background: url("//cdn.kuaidi100.com/images/user/history/ico_his.png") no-repeat;
+ }
+ 
+ .addrbook-box a.a-pre {
+    background-position: -13px -315px;
+    border-right: none;
+ }
+ 
+ .addrbook-box a.a-pre:hover {
+    background-position: -13px -415px;
+ }
+ 
+ .addrbook-box a.a-next {
+    background-position: -11px -365px;
+ }
+ 
+ .addrbook-box a.a-next:hover {
+    background-position: -11px -465px;
+ }
+ 
+ .addrbook-box a.a-edit {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    visibility: hidden;
+    background: url("//cdn.kuaidi100.com/images/user/history/ico_his.png") -14px -1112px no-repeat;
+ }
+ 
+ .addrbook-box tr.hover a.a-edit {
+    visibility: visible;
+ }
+ 
+ .addrbook-box a.a-del {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    visibility: hidden;
+    background: url("//cdn.kuaidi100.com/images/user/history/ico_his.png") -14px -811px no-repeat;
+ }
+ 
+ .addrbook-box tr.hover a.a-del {
+    visibility: visible;
+ }
+ 
+ a.btn-yellow {
+    height: 40px;
+    line-height: 40px;
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+ }
+ 
+ a.btn-yellow {
+    display: inline-block;
+    text-align: center;
+    color: #FFF;
+    border: none;
+    background-color: #ff7800;
+ }
+ 
+ a.btn-yellow:hover {
+    background-color: #ff961e;
+    color: #FFF;
+    text-decoration: none;
+ }
+ 
+ .company-list {
+    position: absolute;
+    font-size: 12px;
+    background: #FFF;
+    width: 200px;
+    border: 1px solid #d2d2d2;
+    display: none;
+ }
+ 
+ .company-list li {
+    list-style: none;
+    padding-left: 1em;
+    line-height: 2.5em;
+    cursor: pointer;
+ }
+ 
+ .company-list li:hover {
+    background: #f2f2f2;
+ }
+ 
+ li .tag {
+    padding-left: 22px;
+     margin-top: 10px;
+     white-space: nowrap;
+ }
+ 
+ li .info .tag span {
+    display: inline-block;
+    border: 1px solid #fd7f24;
+    color: #fd7f24;
+    border-radius: 3px;
+    margin-right: 4px;
+    padding: 0 2px;
+ }
+ 
+ .marker-gif {
+    background-image: url(https://cdn.kuaidi100.com/images/sz/marker_gif.png?version=6);
+    -webkit-animation: expand 1s infinite steps(1);
+    -moz-animation: expand 1s infinite steps(1);
+    -ms-animation: expand 1s infinite steps(1);
+    animation: expand 1s infinite steps(1);
+    width: 56px;
+    height: 56px;
+    background-repeat: no-repeat;
+    background-size: auto 56px;
+ }
+ 
+ @-webkit-keyframes expand {
+    0% {
+       background-position: 0 0;
+    }
+ 
+    20% {
+       background-position: -56px 0;
+    }
+ 
+    40% {
+       background-position: -112px 0;
+    }
+ 
+    60% {
+       background-position: -168px 0;
+    }
+ 
+    80% {
+       background-position: -224px 0;
+    }
+ 
+    100% {
+       background-position: -280px 0;
+    }
+ }
+ 
+ @-moz-keyframes expand {
+    0% {
+       background-position: 0 0;
+    }
+ 
+    20% {
+       background-position: -56px 0;
+    }
+ 
+    40% {
+       background-position: -112px 0;
+    }
+ 
+    60% {
+       background-position: -168px 0;
+    }
+ 
+    80% {
+       background-position: -224px 0;
+    }
+ 
+    100% {
+       background-position: -280px 0;
+    }
+ }
+ 
+ @-ms-keyframes expand {
+    0% {
+       background-position: 0 0;
+    }
+ 
+    20% {
+       background-position: -56px 0;
+    }
+ 
+    40% {
+       background-position: -112px 0;
+    }
+ 
+    60% {
+       background-position: -168px 0;
+    }
+ 
+    80% {
+       background-position: -224px 0;
+    }
+ 
+    100% {
+       background-position: -280px 0;
+    }
+ }
+ 
+ @keyframes expand {
+    0% {
+       background-position: 0 0;
+    }
+ 
+    20% {
+       background-position: -56px 0;
+    }
+ 
+    40% {
+       background-position: -112px 0;
+    }
+ 
+    60% {
+       background-position: -168px 0;
+    }
+ 
+    80% {
+       background-position: -224px 0;
+    }
+ 
+    100% {
+       background-position: -280px 0;
+    }
+ }

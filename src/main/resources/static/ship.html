@@ -1,0 +1,716 @@
+
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta name="apple-itunes-app" content="app-id=458270120"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<title>寄快递,在线寄件 - 快递100</title>
+<meta name="Keywords" content="快递怎么寄,寄快递多少钱,怎么寄快递便宜,同城快递,寄大件,国际快递" />
+<meta name="Description" content="一站式寄快递信息服务平台，在线下单，上门取件，送价值1000元的丢必赔保险服务。可寄顺丰、京东、中通、邮政、Fedex、DHL、UPS等国内外主流快递公司，多品牌比价，寄快递更省钱。支持商家寄件、国内快递，国际快递、同城快递、大件物流，快递柜等多种寄件方式，寄快递更省心。" />
+<link rel="canonical" href="https://www.kuaidi100.com/sz/index.shtml"/>
+<link rel="shortcut icon" href="img/favicon.ico"/>
+<link rel="icon" type="image/gif" href="img/favicon.ico"/>
+<link rel="stylesheet" href="css/sz/base_v4.css?version=201709261440"/>
+<link rel="stylesheet" href="css/sz/sent_v4_new.css?version=201909101510"/>
+<link rel="stylesheet" href="css/sz/courier_v6.css?version=20210302"/>
+<script src="js/util/jquery-1.12.1.min.js"></script>
+<script src="js/util/jquery-migrate-1.4.1.min.js"></script>
+</head>
+<style>
+  .newMyOrder {
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+    padding-left: 22px;
+    background: url(img/g_mine.jpg) left center no-repeat;
+    font-size: 16px;
+    color: #333;
+  }
+</style>
+<body>
+  <input type="hidden" id="headerMenu" value="menu-person" />
+<style>
+  .w1220 {
+    width: 1220px;
+    margin: 0 auto;
+  }
+  .logo a img {
+    width: 119px;
+  }
+  .head-nav {
+    float: right;
+  }
+  .head-nav >ul > li:before {
+    position: absolute;
+    bottom: -28px;
+    right: 50%;
+    left: 50%;
+    border-top: 2px solid #0082FA;
+    line-height: 0;
+    transition: all .3s;
+    content: '';
+  }
+  .head-nav li.head-nav-select:before, .head-nav li:hover:before {
+    left: 20px;
+    right: 20px;
+  }
+  .head-nav li .badge-tips {
+    position: absolute;
+    top: 9px;
+    right: 0;
+    margin-left: -40px;
+    width: auto;
+    padding: 4px;
+    background: #ff9634;
+    border-radius: 4px;
+    color: #FFF;
+    line-height: 12px;
+    font-size: 11px;
+  }
+  .head-nav li .badge-tips:after {
+    position: absolute;
+    bottom: -3px;
+    left: 10px;
+    border-top: 3px solid #ff9634;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    content: "";
+  }
+  .head-nav > ul > li {
+    margin-right: 0;
+    margin-left: 10px;
+    padding: 0 20px;
+  }
+  .user-box {
+    margin-left: 35px;
+  }
+  .head-nav-select > a, .head-nav-select .ico_triangle, li:hover .ico_triangle {
+    color: #317ee7 !important;
+  }
+  .head-nav ul li .ico_triangle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    margin-left: 10px;
+    margin-top: 4px;
+    border-top: 8px solid;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    content: '';
+  }
+  .head-nav ul li .ico_select {
+    display: none;
+  }
+  </style>
+  <div class="header">
+    <div class="w1220">
+      <div class="logo"><a href="" title="查快递， 寄快递，上快递100"><img src="img/login_logo_v5.png" alt="快递100" width="142" height="53" /></a></div>
+      <div class="user-box">
+        <div class="head-nav user-info hidden" id="userInfo">
+          <ul>
+          <li><a href=""><span class="user-img"><img width="35" height="35" id="userImg"></span><span class="user-name" id="userName"></span></a>
+              <ul>
+                <li id="userUrl"></li>
+                <li><a href="">我的寄件订单</a></li>
+                <li><a href="" target="_blank">用户中心</a></li>
+                <li><a href="" onclick="logout();return false;">退出</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <span id="welcome" class="sign hidden"><a href="register.html">注册</a><i>|</i>
+		<a href="login.html">登录</a></span>
+      </div>
+      <div class="head-nav">
+        <ul>
+          <li id="menu-track"><a href="HomePage.html" title="查快递， 寄快递，上快递100">首页</a></li>
+          <li  id="menu-person"><a>个人用户</a><i class="ico_triangle"></i>
+            <ul>
+              <li><a href="">产品介绍</a></li>
+              <li><a href=""  target="_blank">寄快递</a></li>
+              <li><a href="" target="_blank">国际快递</a></li>
+              <li><a href="">快递大全</a></li>
+              <li><a href="" target="_blank">开放服务</a></li>
+            </ul>
+          </li>
+          <li><a>企业用户</a><i class="ico_triangle"></i>
+            <ul>
+              <li><a href="">快递管家</a></li>
+              <li><a href="" target="_blank">企业API</a></li>
+            </ul>
+          </li>
+          <li><a>物流服务商</a><i class="ico_triangle"></i>
+            <ul>
+              <li><a href="" target="_blank">快递员收件端</a></li>
+              <li><a href="" target="_blank">云打印硬件</a></li>
+              <li><a href="" target="_blank">快递公司入驻</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" id="menu-api" target="_blank">接口(API)</a>
+            <i class="ico_triangle"></i>
+            <ul>
+              <li><a href="" target="_blank">产品介绍</a></li>
+              <li><a href="" target="_blank">接口申请</a></li>
+              <li><a href="" target="_blank">技术文档</a></li>
+              <li><a href=""  target="_blank">云平台</a></li>
+            </ul>
+          </li>
+          <li><a href="" target="_blank">3.5元寄全国</a><span class="badge-tips">商家特惠</span></li>
+        </ul>
+      </div>
+      <div class="box"></div>
+    </div>
+  </div>
+  <div class="hr"></div>
+  
+  
+<div class="newsent-main" id="main" @click="cancel">
+  <div class="newsent-mask" v-show="showMask" v-cloak>
+    <div class="newsent-mask-content fadeIn">
+      <div class="newsent-mask-content-title">提示</div>
+      <div class="newsent-mask-content-desc" v-html="tipsContent">
+      </div>
+      <div class="newsent-mask-content-btn cp" @click="{showMask = false}">{{tipsBtn}}</div>
+      <span class="newsent-mask-content-close cp" @click="{showMask = false}">×</span>
+    </div>
+  </div>
+  <div class="newsent-mask" v-show="lock" v-cloak>
+    <div class="newsent-mask-content_loading fadeIn">
+      <img src="//cdn.kuaidi100.com/images/smart/order/loading.gif" style="width: 160px;">
+      <div style="text-align: center;">正在下单...</div>
+    </div>
+  </div>
+  <div class="newsent" style="min-height: 1200px;">
+    <div class="init-loading" v-show="isShowInit" style="background: none;">
+      <img src="img/loading.gif" style="width: 160px;margin-top: 180px;">
+    </div>
+    <div class="newsent-tab" v-cloak>
+      <div class="newsent-tab-detail" v-for="(item,index) in tabList" :class="{choose : index === chooseFunIndex}" @click="chooseFun(index)">{{item}}</div>
+    </div>
+    <div class="newother" v-if="showOtherPage" v-cloak>
+      <div class="newother-content">
+        <div class="notice-banner" v-show="chooseFunIndex == 3">寄件小贴士：周一至周五 08:30 --17:30服务时间。 非服务时间的订单，将在下一个工作时间处理</div>
+        <div class="newother-content-left ib">
+          <div class="newother-content-title">{{otherpage[chooseFunIndex-1].title}}</div>
+          <div class="newother-content-detail" v-for="(item, index) in otherpage[chooseFunIndex-1].desc">
+            <img class="vam" :src="otherpage[chooseFunIndex-1].url + (index+1) + '.png'">
+            <span class="vam">{{item}}</span>
+          </div>
+        </div>
+        <div class="newother-content-right ib">
+          <img :src="otherpage[chooseFunIndex-1].code">
+          <div class="newother-content-right-desc"><img src="img/wxpay.png"><span>微信扫码下单</span></div>
+        </div>
+      </div>
+    </div>
+    <div v-show="!showOtherPage" v-cloak>
+      <div class="newsent-tips" v-if="nowTime">
+        <div class="newsent-tips-sign">!</div>
+        <div>上门营业时间为：{{vm.kdItem.serviceTime}}，现在下单预计{{istoday}}{{vm.kdItem.serviceTime.split('-')[0]}}之后取件。</div>
+      </div>
+      <div class="newsent-info clearfix">
+        <div class="newsent-title" style="margin-bottom: 26px;">
+          <a class="newMyOrder" href="" class="order-list" target="_blank">我的订单</a>
+          <div class="newsent-info-own cp" v-if="showOwn" @click="goUrl('/courier/indexOld.jsp')">专属快递员下单, 点这里 &gt;</div>
+          <div class="notice" v-if="announcement" @click="showNotice">
+            <div class="notice-main">{{announcement}}</div>
+          </div>
+          <span class="newsent-title-detail newsent-title-must">收寄件人信息</span>
+        </div>
+        <div class="newsent-half ib fl">
+          <div class="newsent-bdr"></div>
+          <div class="newsent-half-top">
+            <div class="newsent-half-top-left sent ib">寄件人<span>(出发地)</span></div>
+            <div class="newsent-half-top-right ib">
+              <span @click="smartStick(0)">智能粘贴板</span><span id="showContact" handle="send">地址簿</span>
+            </div>
+          </div>
+          <!--寄件人-->
+          <div class="newsent-half-content w100 clearfix">
+            <div class="newsent-half-content-left ib" style="padding-top: 6px;">寄件人姓名：</div>
+            <div class="newsent-half-content-rightStick ib" v-show="isStick">
+              <textarea
+                rows="7" cols="45" 
+                placeholder="粘贴整段文字，自动识别名字、电话和地址等；如：张三，13800138000，广东省深圳市南山区科技南十二路金蝶软件园"
+                v-model="sendContent"
+                >
+              </textarea>
+              <div class="rightStick-btn">
+                <button @click="smartStick(0)">返回</button>
+                <button @click="infosplit(0)">识别</button>
+              </div>
+            </div>
+            <div class="newsent-half-content-right ib">
+              <input validrole="sendName" type="text" placeholder="请输入寄件人姓名" v-show="!isStick" v-model="subData.sendName" :class="{'redB' : valid.sendName}">
+              <div class="newsent-half-content-err" v-show="valid.sendName">请输入寄件人姓名</div>
+            </div>
+          </div>
+          <div class="newsent-half-content w100" v-show="!isStick">
+            <div class="newsent-half-content-left ib">联系电话：</div>
+            <div class="newsent-half-content-right ib">
+              <input type="text" placeholder="请输入手机号码" v-model="subData.sendMobile" validrole="sendMobile" maxlength="11" :class="{'redB' : valid.sendMobile}">
+              <div class="newsent-half-content-err" v-show="valid.sendMobile">请输入11位数的手机号码</div>
+            </div>
+          </div>
+          <div class="newsent-half-content w100" v-show="!isStick">
+            <div class="newsent-half-content-left ib">寄件人地址：</div>
+            <div class="newsent-half-content-right ib">
+              <div class="newsent-half-content-right-loc" :class="{'redB' : valid.sendxzq}">
+                <div id="startCity" @click="showStart" validrole="sendxzq" :class="{bw: subData.sendxzq !== '请选择省市区'}">{{subData.sendxzq}}</div>
+                <div class="tri" @click="showStart"></div>
+                <div class="newsent-half-content-err" v-show="valid.sendxzq">请选择省市区</div>
+              </div>
+              <div id="sendXzq" class="location-box"></div>
+              <input type="hidden" id="cityName_input_1">
+              <input type="hidden" id="cityName_input">
+            </div>
+          </div>
+          <div class="newsent-half-content w100" v-show="!isStick">
+            <div class="newsent-half-content-left ib"></div>
+            <div class="newsent-half-content-right ib">
+              <input type="text" :class="{'redB' : valid.sendAddr}" validrole="sendAddr" placeholder="请输入详细地址" id="startAddr" @focus="focStartAddr" v-model="subData.sendAddr">
+              <div class="newsent-half-content-err" v-show="valid.sendAddr">请填写4个字以上的地址</div>
+            </div>
+          </div>
+          <div class="clear-fill" v-show="showSendClear" @click="clear('send')">清空已填信息</div>
+        </div>
+        <!--收件人-->
+        <div class="newsent-half ib fr">
+          <div class="newsent-half-top">
+            <div class="newsent-half-top-left rec ib">收件人<span>(目的地)</span></div>
+            <div class="newsent-half-top-right ib">
+              <span @click="smartStick(1)">智能粘贴板</span><span id="showContact2" handle="rec">地址簿</span>
+            </div> 
+          </div>
+          <div class="newsent-half-content w100">
+            <div class="newsent-half-content-left ib">收件人姓名：</div>
+            <div class="newsent-half-content-rightStick ib" v-show="isStickRec">
+              <textarea
+                rows="7" cols="45" 
+                placeholder="粘贴整段文字，自动识别名字、电话和地址等；如：张三，13800138000，广东省深圳市南山区科技南十二路金蝶软件园"
+                v-model="recContent"
+              >
+              </textarea>
+              <div class="rightStick-btn">
+                <button @click="smartStick(1)">返回</button>
+                <button @click="infosplit(1)">识别</button>
+              </div>
+            </div>
+            <div class="newsent-half-content-right ib">
+              <input type="text" placeholder="请输入收件人姓名" validrole="recName" v-model="subData.recName" v-show="!isStickRec" :class="{'redB' : valid.recName}">
+              <div class="newsent-half-content-err" v-show="valid.recName">请填写收件人姓名</div>
+            </div>
+          </div>
+          <div class="newsent-half-content w100" v-show="!isStickRec">
+            <div class="newsent-half-content-left ib">联系电话：</div>
+            <div class="newsent-half-content-right ib">
+              <input type="text" :placeholder="recph" v-model="subData.recMobile" validrole="recMobile" maxlength="20" :class="{'redB' : valid.recMobile}">
+              <div class="newsent-half-content-err" v-show="valid.recMobile">{{recMobileValid}}</div>
+              <div class="newsent-half-content-phone" @click="changeRecph">{{recbtn}}</div>
+            </div>
+          </div>
+          <div class="newsent-half-content w100" v-show="!isStickRec">
+            <div class="newsent-half-content-left ib">收件人地址：</div>
+            <div class="newsent-half-content-right ib">
+              <div class="newsent-half-content-right-loc" :class="{'redB' : valid.recxzq}">
+                <div id="endCity" @click="showEnd" validrole="recxzq" :class="{bw: subData.recxzq !== '请选择省市区'}">{{subData.recxzq}}</div>
+                <div class="tri" @click="showEnd"></div>
+                <div class="newsent-half-content-err" v-show="valid.recxzq">请选择省市区</div>
+              </div>
+              <div id="recXzq" class="location-box"></div>
+            </div>
+          </div>
+          <div class="newsent-half-content w100" v-show="!isStickRec">
+            <div class="newsent-half-content-left ib"></div>
+            <div class="newsent-half-content-right ib">
+              <input type="text" :class="{'redB' : valid.recAddr}" placeholder="请输入详细地址" id="endAddr" @focus="focEndAddr" v-model="subData.recAddr" validrole="recAddr">
+              <div class="newsent-half-content-err" v-show="valid.recAddr">请填写4个字以上的地址</div>
+            </div>
+          </div>
+          <div class="clear-fill" v-show="showRecClear" @click="clear('rec')">清空已填信息</div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="newsent-title newsent-title_line">
+        <span class="newsent-title-detail newsent-title-must vam">物品信息</span>
+        <span class="newsent-title-tips vam" @click="showBannedToggle1(0)">什么不能寄?</span>
+      </div>
+      <div class="newsent-goods">
+        <div class="w100" validrole="cargo">
+          <div class="newsent-goods-title vam">物品类型：</div>
+          <div class="newsent-goods-main vam">
+            <div class="newsent-goods-main-name" :class="{chooseTab : chooseIndex === index}" v-for="(item,index) in goods" @click="chooseTab(item, index)">{{item.name}}</div>
+            <div class="newsent-half-content-err err-bottom" v-show="valid.cargo">请选择物品信息</div>
+          </div>
+        </div>
+        <div class="newsent-goods-main-attach" v-show="showOther || JSON.stringify(goodsData) !== '[]'">
+          <input type="text" placeholder="请输入物品名称" v-show="showOther" v-model="cargoInput" maxlength="20" validrole="cargoInput" />
+          <div v-for="(item,index) in goodsData" class="ib" v-if="JSON.stringify(goodsData) !== '[]'">
+            <input name="cargodesc" type="checkbox" :class="{ml0: index === 0 && !showOther}" @click="checkedOne(item)" :checked="subData.cargodesc.indexOf(item) > -1"/>{{item}}
+          </div>
+          <div class="newsent-half-content-err" v-show="valid.cargoInput" style="padding-left: 78px;">请输入物品名称</div>
+        </div>
+      </div>
+      <div class="newsent-goods"  id="newsentGoods">
+        <div class="newsent-goods-title">预估重量：</div>
+        <div class="newsent-goods-main-weight">
+          <div class="newsent-goods-main-weight-input">
+            <input type="number" placeholder="请输入" v-model="subData.weight" style="vertical-align: unset;"/>公斤
+          </div>
+          <span>上限30公斤</span>
+          <div class="newsent-half-content-err err-bottom" v-show="valid.weight">请选择输入1-30的整数</div>
+        </div>
+      </div>
+   
+      <div class="newsent-kd" v-if="JSON.stringify(expressBrandData) !== '[]' || showLoading">
+        <div class="newsent-kd-loading" v-show="showLoading">
+          <img src="img/loading.gif" style="width: 160px;">
+          <div style="text-align: center;">正在加载中...</div>
+        </div>
+        <div class="newsent-kd-left" @mouseover="startMove" @mouseout="endMove" v-if="expressBrandData.length > 5"></div>
+        <div class="newsent-kd-right" @mouseover="startMoveRev" @mouseout="endMove" v-if="expressBrandData.length > 5"></div>
+        <div class="newsent-kd-scroll" style="overflow-y: hidden;" id="move" v-show="!showLoading" :style="{margin: expressBrandData.length <= 5 ? '2px' : '2px auto'}">
+          <div class="newsent-kd-content" v-for="(item,index) in expressBrandData" :class="{'newsent-kd-first': index === kdIndex, 'not-allow': subData.cargodesc.length > 0 && !item.dispatchInfo}" @click="chooseKd(item,index)">
+            <div class="newsent-kd-content-price" v-show="subData.cargodesc.length === 0 || item.dispatchInfo"><span>{{item.price}}</span><span>元</span></div>
+            <div class="newsent-kd-content-price" v-show="subData.cargodesc.length > 0 && !item.dispatchInfo"><span>暂不支持该物品</span></div>
+            <div class="newsent-kd-content-name">{{item.name}}</div>
+            <div class="newsent-kd-recomment" v-if="item.com === 'kuaidi100'">推荐</div>
+            <div class="newsent-kd-cheap" v-if="item.cheap === 1 && (subData.cargodesc.length === 0 || item.dispatchInfo)"><div>最便宜</div></div>
+          </div>
+        </div>
+        <div class="newsent-kd-choose" v-show="showChooseKd && !showLoading">
+          <span class="newsent-kd-choose-title cp" @click.stop.prevent="chooseComeKd">{{kdName}}</span>
+          <span class="newsent-kd-choose-detail cp" v-for="(item,index) in comable" @click="delcom(item,index)">{{item.name}} x</span> 
+          <div class="newsent-kd-choose-kd" v-show="isShowComeKd" @click.stop.prevent>
+            <div class="newsent-kd-choose-kd-title w100">选择快递公司</div>
+            <div class="newsent-kd-choose-kd-desc 100">快递100优选寄件服务会在以下品牌内为您匹配最适合的品牌，若有指定快递品牌的需要，请选择：</div>
+            <div class="choose-kd-content">
+              <div class="choose-kd-content-detail cp" v-for="(item,index) in availableCom4dispatchData" @click="chooseCom(item,index)">
+                <img class="choose-kd-content-detail-img vam" :src="item.logo">
+                <span class="choose-kd-content-detail-name vam">{{item.name}}</span>
+                <img class="choose-kd-content-detail-icon vam" v-if="item.useable === 'Y' && calc(item)" src="https://cdn.kuaidi100.com/images/newc/ico_chosen.png">
+                <span class="choose-kd-content-detail-word vam" v-if="item.useable !== 'Y'">暂不支持该特殊物品</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="newsent-title newsent-title_line">
+        <span class="newsent-title-detail">增值服务</span>
+      </div> -->
+      <!--选择时间-->
+      <div class="newsent-other" v-show="JSON.stringify(expressBrandData) !== '[]' && kdItem.dispatchInfo">
+        <div class="newsent-other-title ib vam">
+          <span class="must">期望上门时间</span> ：
+        </div>
+        <div class="newsent-other-choose ib vam">
+          <div class="newsent-other-time" @click="timeToggle" :class="{'redB' : valid.doortime}" validrole="doortime">
+            <span class="newsent-other-time-dis" :class="{'gray': subData.doortime === '请选择上门时间'}">{{subData.doortime}}</span>
+            <div class="tri"></div>
+            <div class="newsent-other-time-tips" v-show="timeDescr">+{{timeDescr}}</div>
+          </div>
+          <div class="other-time-content" v-show="isShowTime">
+            <div class="other-time-content-tab w100 cp">
+              <div v-for="(item,index) in day" @click="changeDay(item,index)" :class="{'time-content-tab-choose': nowDay === item}">{{item}}</div>
+            </div>
+            <div class="other-time-content-detail w100">
+              <div class="other-time-content-detail cp" v-for="(item,index) in dayList" @click="chooseTime(item,index)">
+                <span>{{item.itemValue}}</span>
+                <span class="other-time-content-detail-night" v-if="item.itemName === '2'">{{item.descr}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="newsent-half-content-err" v-show="valid.doortime">请选择上门取件时间</div>
+        </div>
+        <div class="newsent-other-info ib vam" v-if="!showTips">
+          提示：请至少提前半小时预约上门时间，若是紧急请与快递员沟通,实际上门时间以协商后的为准                    
+        </div>
+        <div class="newsent-other-info ib vam" style="color:#ff7f02;" v-if="showTips">
+          {{timeData.tips}}
+        </div>
+      </div>
+      <!--保费-->
+      <div class="newsent-other" v-show="JSON.stringify(expressBrandData) !== '[]' && kdItem.dispatchInfo">
+        <div class="newsent-other-title ib">
+          <span class="newsent-other-title-ques" @mouseover="{showValin = true}" @mouseout="{showValin = false}">?</span><span class="newsent-other-title-detail">保价：</span>
+          <div class="newsent-other-title-valin" v-show="showValin">
+            <span>1. 费率0.5%，向上取整，最低2元。</span><br><span>2. 不可保：1）易碎品，如电子屏幕、玻璃、酒、石材石膏、雕刻、标本等；2）价值不定：珠宝首饰、燕窝虫草人参、工艺品、古董等；3）不易保存：腊制品、生鲜、烘培等；4）违禁品；</span><br><span>3. 外包装完好但内含物品破损不可赔偿；</span><br><span>4. 请按物品实际价值填写保价金额；</span><br><span>5. 快递员上门时，会核验您寄送的物品是否属于保价范围并进行拍照。</span>                    
+          </div>
+        </div>
+        <div class="newsent-other-choose ib">
+          <span class="newsent-other-fee" v-show="subData.valinspay">+保费{{valinsFee}}元</span>
+          <input type="text" placeholder="请输入保价金额（最高10000元）" v-model="subData.valinspay" :class="{'redB' : valid.valinspay}">
+          <div class="newsent-half-content-err" v-show="valid.valinspay">{{valinWords}}</div>
+        </div>
+        <div class="newsent-other-protocol ib vam">
+          <input type="checkbox" :checked="isAgreeValins" @click="{isAgreeValins = !isAgreeValins}" class="vam"><span class="vam">我已阅读并同意</span><a class="vam" @click="showBannedToggle1(2)">《快递100平台保价增值服务协议》</a>
+        </div>
+      </div>
+    
+      <!--留言-->
+      <div class="newsent-other" v-if="JSON.stringify(expressBrandData) !== '[]'" style="width: 110%;">
+        <div class="ib" style="vertical-align: top;">
+          <div class="newsent-other-title ib">
+            <span class="newsent-other-title-detail">快递员留言：</span>
+          </div>
+          <div class="newsent-other-choose ib">
+            <input type="text" maxlength="30" placeholder="请输入给快递小哥的留言" v-model="subData.comment">
+          </div>
+        </div>
+        <div class="newsent-other-tag ib">
+          <div v-for="(item,index) in MsgList" class="cp" @click="addMsg(item)">+{{item.lable}}</div>
+        </div>
+      </div>
+      <!--预计运费-->
+      <div id="fixedBar"></div>
+      <div class="newsent-submit" :class="{fixed: fixedBar, 'newsent-title_line': !fixedBar}">
+        <div class="newsent-submit-fee ib">
+          <span>预计运费：</span>
+          <span v-if="newMoney">{{newMoney}}</span>
+          <span v-else>{{showPrice ? kdItem.com === 'kuaidi100' ? subData.valinspay ? valinsFee + Number(money) : (+money).toFixed(1) : Number(money) : '--'}}</span>
+          <span>元</span>
+        </div>
+        <div class="newsent-submit-detail ib" @mouseover="{showHover = true}" @mouseout="{showHover = false}">
+          <div class="newsent-submit-detail-word" v-show="showPrice || newMoney">
+            查看明细
+            <div class="newsent-submit-detail-arrow" :style="{transform: showHover ? 'rotate(-90deg)' : 'rotate(90deg)'}">›</div>
+          </div>
+          <div class="newsent-submit-detail-content" v-show="(showPrice || newMoney) && showHover">
+            <div v-if="kdItem.com === 'debangkuaidi' || kdItem.com === 'kuaidi100'">
+              <div class="detail-content-title w100" v-if="kdItem.com === 'kuaidi100'">{{kdItem.name}}</div>
+              <div class="detail-content-title w100" v-else>{{+subData.weight < 4 ? kdItem.name : '德邦大件3.60'}}</div>
+              <div class="detail-content-detail w100" v-if="feeData.firstWeightPrice">
+                <div class="detail-content-detail-left ib">首重({{subData.weight - feeData.overWeight}}公斤)</div>
+                <div class="detail-content-detail-right ib">{{feeData.firstWeightPrice}}元</div>
+              </div>
+              <div class="detail-content-detail w100" v-if="feeData.overWeight">
+                <div class="detail-content-detail-left ib">续重</div>
+                <div class="detail-content-detail-right ib">{{feeData.overWeightPrice}}元/公斤*{{feeData.overWeight}}={{feeData.overTotalPrice}}元</div>
+              </div>
+              <div class="detail-content-detail w100" v-if="subData.valinspay && !isdb">
+                <div class="detail-content-detail-left ib">保费</div>
+                <div class="detail-content-detail-right ib">{{valinsFee}}元</div>
+              </div>
+              <div class="detail-content-detail w100" v-if="(+feeData.nightFee > 0) && !isdb">
+                <div class="detail-content-detail-left ib">夜间取件费</div>
+                <div class="detail-content-detail-right ib">{{feeData.nightFee}}元</div>
+              </div>
+              <div class="detail-content-detail w100" v-if="subData.couponid && !isdb">
+                <div class="detail-content-detail-left ib">	抵扣</div>
+                <div class="detail-content-detail-right ib">-{{feeData.couponPrice}}元</div>
+              </div>
+            </div>
+            <div v-else>
+              <div class="detail-content-detail w100">
+                <div class="detail-content-title w100">{{kdItem.name}}</div>
+                <div class="detail-content-detail-left ib">总费用</div>
+                <div class="detail-content-detail-right ib">{{kdItem.price}}元</div>
+              </div>
+            </div>
+            <div class="detail-content-desc">保价、包装费用，根据双方协商费用为准，不在预计费用中</div>
+          </div>
+        </div>
+        <div class="newsent-submit-btn ib">
+          <div class="newsent-submit-btn-protocol ib vam cp" @click="agreeProtocol" :style="{border: isAgreeProtocol ? 'none' : '1px solid #ddd'}">
+            <img src="img/cb_protocol.png" v-show="isAgreeProtocol">
+          </div>
+          <div class="ib vam">我已阅读并同意<a @click="showBannedToggle1(1)">《快递100寄件服务协议》</a></div>
+          <div class="newsent-submit-btn-btn ib" @click="submit">立即下单</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="float-box hidden" id="float">
+    <div class="float-bg"></div>
+    <div class="float-body hidden contact-box" id="contactBox">
+      <h4>收件人地址簿</h4>
+      <a class="a-close"></a>
+      <div class="addrbook-box">
+        <p><label>快速查询</label><input type="text" class="inp-search" id="contactKeyword" placeholder="输入名字等" /><a class="a-search" id="searchContactBtn"></a></p>
+        <div class="contact-table-wrap">
+          <table id="contactTable">
+          </table>
+        </div>
+        <p style="display:none;"><span class="fr"><span id="contactStart"></span>-<span id="contactEnd"></span>&emsp;共<span id="contactTotal"></span>条&emsp;<a class="a-page a-pre">上一页</a><a class="a-page a-next">下一页</a></span></p>
+      </div>
+      <div class="contact-btn"><a href="personalCenter_address.html" class="btn-yellow" target="_blank" id="goAddress">地址管理</a></div>
+    </div>
+  </div>
+  <div class="frame hidden" id="loginWrap">
+    <div class="frame-box login-frame">
+      <a class="frame-close-btn" id="loginCloseBtn"></a>
+      <iframe src="https://sso.kuaidi100.com/sso/sentlogin.jsp" id="loginFrame" width="320" height="384" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </div>
+  <div class="frame" v-show="showBanned" v-cloak>
+    <div class="frame-box frame-box-banned">
+      <div class="frame-close-btn-banned" @click="{showBanned = false}">✕</div>
+      <div class="frame-newsent-title">{{iframeTitle}}</div>
+      <iframe style="background: #fff;" :src="iframeUrl" width="720" height="420" frameborder="0" scrolling="yes"></iframe>
+      <div class="frame-newsent-btn" @click="showBannedToggle">{{iknow}}</div>
+    </div>
+  </div>
+  <div id="send-map" style="display:none;"></div>
+</div>
+<style>
+  .footer {
+    height: 340px;
+    padding-top: 75px;
+    background: #02163c;
+    color: #FFF;
+  }
+  .footer .foot-link dt {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFF;
+  }
+  .foot-link, .foot-link a {
+    color: #FFF;
+  }
+  .foot-copyright {
+    padding-top: 25px;
+    margin-top: 50px;
+    border-top: 1px solid #4a4a4a;
+    text-align: center;
+    font-size: 14px;
+  }
+  .foot-copyright a {
+    color: #FFF;
+  }
+  .footer-industry {
+    padding-top: 10px;
+    text-align: center;
+  }
+  .footer-industry li {
+    display: inline-block;
+  }
+  .footer-industry a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(https://cdn.kuaidi100.com/images/www/sp-index.png) -287px -206px;
+  }
+  .footer-qrcode {
+    float: right;
+  }
+  .footer-code {
+    float: left;
+    margin-left: 30px;
+    width: 123px;
+    text-align: center;
+    font-size: 16px;
+  }
+  .footer-qrcode img {
+    width: 123px;
+    height: 123px;
+    margin-bottom: 16px;
+  }
+</style>
+<div class="fix-box-middle" id="floatCtrl">
+    <i href="#" onclick="gototop();return true;" class="ctrl-btn-1" title="回到顶部"></i>
+     <a  target="_blank" class="ctrl-btn-2" title="联系客服" id="uDeskTarget"></a>
+  <a href="javascript:;" class="ctrl-btn-2 ctrl-btn-3" title="手机版（H5站）" id="goH5"></a>
+</div>
+<div class="footer">
+  <div class="w1220">
+    <div class="foot-link">
+      <dl>
+        <dt>了解我们</dt>
+        <dd><a href="" target="_blank">关于快递100</a></dd>
+        <dd><a href="" target="_blank">新闻资讯</a></dd>
+        <dd><a href="" target="_blank">隐私政策</a></dd>
+      </dl>
+      <dl>
+        <dt>关注我们</dt>
+        <dd><a href="">微信公众号</a></dd>
+        <dd><a href="">新浪微博</a></dd>
+        <dd><a href="">100社区</a></dd>
+      </dl>
+      <dl>
+        <dt>联系我们</dt>
+        <dd><a href="" target="_blank">联系方式</a></dd>
+        <dd><a href="" target="_blank">加入我们</a></dd>
+        <dd><a href="">帮助文档</a></dd>
+      </dl>
+      <dl>
+        <dt>快速通道</dt>
+        <dd><a href="#" id="viewH5">手机HTML5站</a></dd>
+        <dd><a href="">快递网点入驻/加盟</a></dd>
+        <dd><a href="">快递网点维护/更新</a></dd>
+      </dl>
+      <ul class="footer-qrcode">
+        <li class="footer-code">
+          <img src="img/qrcode-courier.png" alt="快递员端">
+          <p>快递100收件端</p>
+        </li>
+        <li class="footer-code">
+          <img src="img/qrcode-public.png" alt="关注公众号">
+          <p>快递100</p>
+        </li>
+      </ul>
+        <div class="box"></div>
+    </div>
+    <div class="foot-copyright">
+      深圳前海百递网络有限公司 版权所有&copy;2010-<span id="copyrightYear">2021</span>
+      <script>document.getElementById("copyrightYear").innerHTML = (new Date()).getFullYear();</script>
+      <a href="http://beian.miit.gov.cn" target="_blank" rel="nofollow">粤ICP备14085002号-5</a>
+      <a href="" target="_blank" rel="nofollow">粤B2-20150010</a>
+    </div>
+    <ul class="footer-industry">
+      <li><a target="_blank" href="" title="深圳市市场监督管理局企业主体身份公示" style="background-position: -287px -206px;width: 16px;height: 17px;" rel="nofollow"></a></li>
+      <!-- <li><a target="_blank" href="http://61.144.227.239:9002/" title="深圳市网上报警平台" style="background-position: -287px -233px;width: 16px;height: 18px;" rel="nofollow"></a></li> -->
+      <li><a target="_blank" title="可信任网站" href="https://ss.knet.cn/verifyseal.dll?sn=e17090744030068817gc1i000000&amp;pa=111332" style="background-position: -262px -259px;width: 42px;height: 15px;" rel="nofollow"></a></li>
+    </ul>
+    <div class="box"></div>
+  </div>
+</div>
+<div id="updateNotice" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index: 99999;background:rgba(0,0,0,.3);text-align:center;display:none;">
+  <div style="display:inline-block;vertical-align:middle;position:relative;">
+    <div id="noticeClose" style="position: absolute;right: 0;top: -37px;background: url(https://cdn.kuaidi100.com/images/sz/ico_close.png) no-repeat;width: 24px;height: 24px;display: inline-block;cursor: pointer;"><span style="display: block;border-left: 2px solid #fff;height: 14px;content: '';margin-top: 24px;margin-left: 10px;"></span></div>
+    <img src="img/notice_20180803.png" alt="">
+  </div>
+  <span style="display:inline-block;vertical-align:middle;width:0;height: 100%;"></span>
+</div>
+<script>
+(function(a,h,c,b,f,g){a["UdeskApiObject"]=f;a[f]=a[f]||function(){(a[f].d=a[f].d||[]).push(arguments)};g=h.createElement(c);g.async=1;g.charset="utf-8";g.src=b;c=h.getElementsByTagName(c)[0];c.parentNode.insertBefore(g,c)})(window,document,"script","//assets-cli.udesk.cn/im_client/js/udeskApi.js","ud");
+ud({
+    "code": "298f17ga",
+    "link": "https://kuaidi100.udesk.cn/im_client/?web_plugin_id=48851",
+    targetSelector: "#uDeskTarget"
+});
+function loadUpdate() {
+  var now = (new Date()).getTime(),last = (new Date("2018/08/04 07:00:00")).getTime();
+  var closeTime = getcookie("udpate"),dom = $("#updateNotice"),closeTime = +getcookie("noticeCloseTime");
+  if(now > last || (now - closeTime - 24*3600*1000) < 0) {
+    dom.remove();
+  } else {
+    dom.show();
+  }
+ $("#noticeClose").click(function(event) {
+   setcookie("noticeCloseTime",now);
+   dom.remove();
+ });
+}
+window.onload = function(){
+  loadUpdate();
+}
+document.getElementById("viewH5").addEventListener("click", function() {
+  window.open("https://m.kuaidi100.com?coname=www", '_blank', 'width=375px, height=667px, toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no')
+})
+</script>
+<!--引入高德地图JSAPI -->
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.11&key=164a77496422efa16df22a02fff8c828"></script>
+<script src="js/share/vue.js"></script>
+<script src="js/share/base_v4.js?version=201707191039"></script>
+<script src="js/share/user_v4.js?version=201909091000"></script>
+<script src="js/share/areas.js?version=201905311010"></script>
+<script src="js/share/city_new.js?version=201907111400"></script>
+<script src="js/share/count.js?version=201707191039"></script>
+<script src="js/page/sent_v6.js?version=20210302"></script>
+<script src="js/share/couponPop.js?version=201911081400"></script>
+</body>
+</html>

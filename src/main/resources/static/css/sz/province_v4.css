@@ -1,0 +1,409 @@
+em {
+  color: #ff7800;
+  font-style: normal;
+}
+/*当前页样式*/
+.companyinfo span {
+  margin-left: 15px
+}
+/*城市选择*/
+.cities {
+  position: absolute;
+  left: 5px;
+  top: 42px;
+  z-index: 111;
+  -moz-box-shadow: 2px 2px 5px rgb(50, 50, 50);
+}
+.inp1 {
+  width: 100px;
+  line-height: 33px;
+  font-size: 14px;
+  float: left;
+}
+/*查询结果*/
+.result .display-view {
+  float: right;
+  height: 28px;
+  line-height: 28px;
+  padding-left: 45px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: bold;
+  background: url("https://cdn.kuaidi100.com/images/network/network_01.gif") no-repeat;
+}
+.result .count {
+  width: 560px;
+  padding: 8px 10px;
+  background-color: #f5faff;
+  float: left;
+  line-height: 22px;
+  margin-bottom: 10px
+}
+.result .com-count {
+  width: 400px;
+  float: left;
+}
+.result .com-count .li1 {
+  float: left;
+  width: 130px;
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 18px;
+  height: 22px;
+}
+.result .com-count .li1 a {
+  float: left;
+  text-decoration: none;
+  padding: 0px 3px;
+  height: 18px;
+}
+.result .com-count .li1 a:hover {
+  float: left;
+  text-decoration: none;
+  padding: 0px 3px;
+  border: 1px solid #ff961e;
+  background-color: #f5faff;
+  color: #ff7800;
+  height: 18px;
+}
+.result .com-count .li1 a:hover .sp2 {
+  color: #ff7800;
+}
+.result .com-count .li1 span {
+  float: left;
+  cursor: pointer;
+}
+.result .com-count .li1 .sp2 {
+  color: #5a5a5a;
+}
+.result .com-count .li1-select a {
+  float: left;
+  text-decoration: none;
+  padding: 0px 3px;
+  border: 1px solid #ff961e;
+  background-color: #f5faff;
+  color: #ff7800;
+  height: 18px;
+}
+.result .com-count .li1-select a .sp2 {
+  color: #ff7800;
+}
+.result .network-list dl {
+  float: left;
+  width: 580px;
+  padding-bottom: 10px;
+  z-index: 0;
+}
+.result .network-list dl dt {
+  float: left;
+  width: 568px;
+  padding: 0px 5px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  border-top: 1px dashed #e6e6e6;
+}
+.result .network-list dl dd {
+  float: left;
+  width: 520px;
+  padding: 0px 5px;
+  line-height: 25px;
+}
+.result .network-list dl dd div {
+  float: left;
+  width: 490px;
+}
+.result .toOrder {
+  display: inline-block;
+  color: #ff7800;
+  margin: 5px 10px 0px 0px;
+  border: 1px solid #ff961e;
+  width: 75px;
+  height: 22px;
+  padding-left: 10px;
+  line-height: 22px;
+}
+.result .toOrder {
+  background: url("https://cdn.kuaidi100.com/images/network/ico_goto.gif") 63px 5px no-repeat;
+}
+.result .toOrder2 {
+  background: none;
+}
+.result .toOrderUp {
+  background: url("https://cdn.kuaidi100.com/images/network/ico_goto.gif") 63px -21px no-repeat;
+}
+.result .toOrderDown {
+  background: url("https://cdn.kuaidi100.com/images/network/ico_goto.gif") 63px -46px no-repeat;
+}
+.result .pagination {
+  margin-top: 20px;
+}
+.example {
+  font-size: 14px;
+}
+/*广告*/
+.adDiv-all {
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.adDiv-all dl {
+  margin-left: 8px
+}
+.adDiv-all dd {
+  margin-left: 5px
+}
+a.but_adm {
+  display: block;
+  line-height: 36px;
+  height: 36px;
+  width: 81px;
+  text-align: center;
+  float: left;
+  margin-right: 15px
+}
+a.but_adm:hover {
+  text-decoration: underline
+}
+a.but_adm {
+  background: url("https://cdn.kuaidi100.com/images/network/adm/frame_05.gif") no-repeat;
+  color: #FFF
+}
+a.but_adm:hover {
+  color: #FFF
+}
+/*-----  发件地弹出层 -start-------*/
+
+/*选择城市框*/
+.input-box {
+  position: relative;
+}
+.selectCity {
+  left: 120px;
+}
+.location-box {
+  position: absolute;
+  left: 133px;
+  top: 39px;
+  z-index: 111;
+  width: 278px;
+  font-size: 12px;
+  overflow: hidden;
+  background-color: #FFF;
+  color: #5a5a5a;
+  border: 1px solid #d2d2d2
+}
+/*分页*/
+.wl-page .page, .wl-page strong, .wl-page span {
+  display: block;
+  float: left;
+  width: 22px;
+  text-align: center;
+  margin-left: 5px
+}
+.wl-page .page {
+  border: 1px solid #e6e6e6
+}
+.wl-page b {
+  display: block;
+  height: 22px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  font-weight: normal;
+  margin-left: 5px
+}
+.page-up {
+  background: url("https://cdn.kuaidi100.com/images/ico_page.gif") no-repeat -24px -58px;
+  padding-right: 5px;
+  padding-left: 12px;
+  color: #d2d2d2
+}
+.page-up-active {
+  background: url("https://cdn.kuaidi100.com/images/ico_page.gif") no-repeat -24px -38px;
+  padding-right: 5px;
+  padding-left: 12px;
+  cursor: pointer;
+  color: #2864c8;
+}
+.page-down {
+  background: url("https://cdn.kuaidi100.com/images/ico_page.gif") no-repeat 36px -58px;
+  padding-right: 12px;
+  padding-left: 5px;
+  margin: 0px 5px;
+  color: #d2d2d2
+}
+.page-down-active {
+  background: url("https://cdn.kuaidi100.com/images/ico_page.gif") no-repeat 36px -38px;
+  padding-right: 12px;
+  padding-left: 5px;
+  margin: 0px 5px;
+  cursor: pointer;
+  color: #2864c8;
+}
+/*查询结果框*/
+.result-info {
+  border-left: 1px solid #e6e6e6
+}
+.result-info th {
+  background: url("https://cdn.kuaidi100.com/images/result_th_bg.gif") repeat-x;
+  border: 1px solid #e6e6e6;
+  border-left: 0px
+}
+.result-info th, .result-info td {
+  padding: 4px 5px
+}
+.result-info th.nobg {
+  border-top: 0;
+  border-left: 0;
+  border-right: 1px solid #e6e6e6;
+  background: none
+}
+.result-info td {
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6
+}
+.result-info th.spec {
+  border-left: 1px solid #aaaaaa;
+  border-top: 0
+}
+.result-info th.specalt {
+  border-left: 1px solid #aaaaaa;
+  border-top: 0
+}
+.result-info th.width-01 {
+  width: 130px
+}
+.result-info th.width-02 {
+  width: 369px
+}
+.result-info .row {
+  color: #828282
+}
+.send-box {
+  border: 1px solid #e6e6e6;
+  border-top: 0;
+  padding: 8px
+}
+.send-box div {
+  font-weight: bold;
+  line-height: 22px
+}
+.send-box hr {
+  border: 1px dotted #e6e6e6
+}
+/*查询输入框-css*/
+#provinceSelect {
+  position: absolute;
+  display: block;
+  width: 188px;
+  height: 40px;
+  background-color: #fff;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.inp-metro {
+  width: 290px;
+  height: 18px;
+  line-height: 18px;
+  padding: 10px 8px;
+  *padding:12px 8px 8px;
+  font-size: 14px;
+  box-shadow: 1px 1px 2px #d2d2d2 inset;
+  border: 1px solid #d2d2d2;
+  color: #aaaaaa;
+  outline:none;
+}
+.inp-city {
+  padding-right: 25px;
+  border-right: none;
+  width: 156px;
+  background: url("https://cdn.kuaidi100.com/images/ico_header.png") 150px -10px no-repeat
+} /*width:90px; 105px*/
+.inp-city-open {
+  background: url("https://cdn.kuaidi100.com/images/ico_header.png") 150px 17px no-repeat
+}
+.vali-images {
+  display: block;
+  float: left;
+  background: url("https://cdn.kuaidi100.com/images/ajax-loader_2.gif") no-repeat center;
+  border: 1px solid #e6e6e6;
+  height: 34px;
+  width: 100px;
+  text-align: center;
+  margin-top: 0px!important;
+  margin-top: 3px
+}
+.vali-images img {
+  cursor: pointer
+}
+.refresh-a {
+  margin: 10px 0px 0px 14px
+}
+.search-box {
+  position: relative;
+}
+.input-tips {
+  position: absolute;
+  top: -1px;
+  right: 0px;
+  display: none;
+  width: 300px;
+  border: 1px solid #d2d2d2;
+  background-color: #fff;
+  z-index: 2;
+}
+.input-tips li {
+  padding-left: 5px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  color: #828282;
+  text-align: left;
+  color:#d2d2d2;
+}
+.input-tips li strong {
+  margin-right: 5px;
+  font-size: 14px;
+  color: #aaaaaa;
+  font-weight:normal;
+}
+.input-tips li.hover {
+  background-color: #e6e6e6;
+}
+.btn-query {
+  width: 100px;
+*width:96px;
+}
+/*左右*/
+#map {
+  margin: 20px 47px;
+  z-index:1;
+}
+.col_1 {
+  float: left;
+  margin-left: -90px;
+  width: 1145px;
+  border: 1px solid #d2d2d2;
+}
+.col_2 {
+  float: right;
+  width: 300px;
+}
+.netsearch {
+  width: 625px;
+  margin: 20px 10px 10px 10px;
+  /* float: left; */
+  text-align: right;
+}
+.search-box {
+  width: auto;
+}
+.city_li {
+  display: inline-block;
+  padding: 10px;
+}
+.city_li li {
+  width: 104px;
+  overflow: hidden;
+  text-overflow: ellipsis
+}

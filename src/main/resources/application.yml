@@ -1,0 +1,24 @@
+spring:
+  redis:
+    host: localhost
+    port: 6379
+
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+
+  datasource:
+    password: 123456
+    username: root
+    url: jdbc:mysql://localhost:3306/express
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.yidu.express.entity
+
+server:
+  servlet:
+    context-path: /express
+

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yidu.express.daoXzy.OrdersDao">
+
+    <resultMap id="BaseResultMap" type="com.yidu.express.entity.Orders">
+        <!--@Table orders-->
+        <result property="orderId" column="order_Id" jdbcType="INTEGER"/>
+        <result property="customerId" column="customer_Id" jdbcType="INTEGER"/>
+        <result property="orderTime" column="order_time" jdbcType="VARCHAR"/>
+        <result property="orderState" column="order_state" jdbcType="INTEGER"/>
+        <result property="orderNumber" column="order_number" jdbcType="VARCHAR"/>
+        <result property="addressIdDirection" column="address_Id_direction" jdbcType="VARCHAR"/>
+        <result property="addressIdSender" column="address_Id_sender" jdbcType="VARCHAR"/>
+        <result property="payWay" column="pay_way" jdbcType="INTEGER"/>
+        <result property="updateTime" column="update_time" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          order_Id, customer_Id, order_time, order_state, order_number, address_Id_direction, address_Id_sender, pay_way, update_time
+        from express.orders
+        where order_number = #{order_number}
+    </select>
+
+    <!--批量查询-->
+    <select id="queryByIds" resultMap="BaseResultMap">
+        select
+          order_Id, customer_Id, order_time, order_state, order_number, address_Id_direction, address_Id_sender, pay_way, update_time
+        from express.orders
+        where order_number in
+        <foreach collection="array" index="index" item="order_number" open="(" separator="," close=")">
+            #{order_number}
+        </foreach>
+    </select>
+
+    <!--查询所有订单号-->
+    <select id="queryAllOrders" resultMap="BaseResultMap">
+        select order_number from express.orders
+        group by order_number;
+    </select>
+
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          order_Id, customer_Id, order_time, order_state, order_number, address_Id_direction, address_Id_sender, pay_way, update_time
+        from express.orders
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+          order_Id, customer_Id, order_time, order_state, order_number, address_Id_direction, address_Id_sender, pay_way, update_time
+        from express.orders
+        <where>
+            <if test="orderId != null">
+                and order_Id = #{orderId}
+            </if>
+            <if test="customerId != null">
+                and customer_Id = #{customerId}
+            </if>
+            <if test="orderTime != null and orderTime != ''">
+                and order_time = #{orderTime}
+            </if>
+            <if test="orderState != null">
+                and order_state = #{orderState}
+            </if>
+            <if test="orderNumber != null and orderNumber != ''">
+                and order_number = #{orderNumber}
+            </if>
+            <if test="addressIdDirection != null and addressIdDirection != ''">
+                and address_Id_direction = #{addressIdDirection}
+            </if>
+            <if test="addressIdSender != null and addressIdSender != ''">
+                and address_Id_sender = #{addressIdSender}
+            </if>
+            <if test="payWay != null">
+                and pay_way = #{payWay}
+            </if>
+            <if test="updateTime != null and updateTime != ''">
+                and update_time = #{updateTime}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="orderId" useGeneratedKeys="true">
+        insert into express.orders(customer_Id, order_time, order_state, order_number, address_Id_direction, address_Id_sender, pay_way, update_time)
+        values (#{customerId}, #{orderTime}, #{orderState}, #{orderNumber}, #{addressIdDirection}, #{addressIdSender}, #{payWay}, #{updateTime})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update express.orders
+        <set>
+            <if test="customerId != null">
+                customer_Id = #{customerId},
+            </if>
+            <if test="orderTime != null and orderTime != ''">
+                order_time = #{orderTime},
+            </if>
+            <if test="orderState != null">
+                order_state = #{orderState},
+            </if>
+            <if test="orderNumber != null and orderNumber != ''">
+                order_number = #{orderNumber},
+            </if>
+            <if test="addressIdDirection != null and addressIdDirection != ''">
+                address_Id_direction = #{addressIdDirection},
+            </if>
+            <if test="addressIdSender != null and addressIdSender != ''">
+                address_Id_sender = #{addressIdSender},
+            </if>
+            <if test="payWay != null">
+                pay_way = #{payWay},
+            </if>
+            <if test="updateTime != null and updateTime != ''">
+                update_time = #{updateTime},
+            </if>
+        </set>
+        where order_Id = #{orderId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from express.orders where order_Id = #{orderId}
+    </delete>
+
+</mapper>

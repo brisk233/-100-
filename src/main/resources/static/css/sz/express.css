@@ -1,0 +1,49 @@
+.search-box { margin: 17px auto 0; width: 610px }
+.tips-top { line-height: 45px }
+.ex-info { clear: both; margin: auto; width: 960px; line-height: 30px; font-family: sans-serif;}
+.ex-info p { text-indent: 2em }
+.ex-title { clear: both; line-height: 26px; margin: auto; padding-left: 150px; width: 760px; }
+.ex-title img { border: 1px solid #CCC; float: left; margin-right: 10px }
+.ex-title h1 { font-size: 14px; color: #FE8D1D; float: left; margin-right: 10px; }
+.bdshareBox { float: left; width: 240px; }
+#bdshare { line-height: 12px; }
+.map-img { text-align: center }
+.map-text a { display: block; width: 60px; float: left; text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: #DDD; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #DDD }
+.map-text { border-top: 1px solid #DDD; border-left: 1px solid #DDD; width: 854px; margin: auto; margin-top: 10px }
+.result-info { width: 100% }
+#allcompanyurl, #allcompanytel { margin-right: 10px }
+#queryContext { width: 610px; }
+.sendMsg { color: #F00 }
+/*result-qr*/
+.qr-box { padding: 25px 70px 25px 100px; border: 1px solid #90bfff; background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQQAAAA/CAMAAAAxHEbiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjM4Mjc2QzdGRTdBQzExRTNBODlGRkNGM0Q2QTkxRjMzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjM4Mjc2QzgwRTdBQzExRTNBODlGRkNGM0Q2QTkxRjMzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzgyNzZDN0RFN0FDMTFFM0E4OUZGQ0YzRDZBOTFGMzMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MzgyNzZDN0VFN0FDMTFFM0E4OUZGQ0YzRDZBOTFGMzMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4q+RS7AAAAS1BMVEXy9v3////+/v/z9/39/v/7/P709/32+f75+/74+v7z9v36/P78/f/3+f79/f/1+P3+///6+/73+v70+P38/f71+P72+P77/f7////5P3eYAAAAGXRSTlP///////////////////////////////8AATQKtwAABNVJREFUeNrsm9eC4yoMhunNFNeZvP+THrAd95Y4OeOE1cXMXnhY/FkSAn6B2xmDEN6+wMDTr4+I1d4ISmGMEDwASyV3zJvjeaYRjA0CRFpwBnrDTpafjeFRCJBQMyRQm3KCPEABfhKEedqDiBoMFgzn+sirwRQRYsnV8ghYz3vEhukOQUArFxEECmafQkqokIZznsusJPDiEELiE7mfrskFtV28o8SBVcP59ms1qaRlqFgl6XUwgJXpFvie9Yxosj8kq27QPCnQFgMrHB7nEanTy0KAJOOj6TKeEB8e1IFtcxSuuwH9UTNqnKKLQvBxz+bJX1OudhgAJdGqGyw7kbsIhSkEqJfSP2bggLkSrrhBteo86QUhQGsUeNawSB9wg9q4hdeDQPLnGQBgFrx7O5cogS4HAQl8ggGoyDwUdkYsSrhkfwgBUnaGASi0n38oCn2R1VRZJN/7G54lU6NU23GV9n9CINUpBoBRUmZ1TWhkXWWhfP+PlPIRqOpf4V/+B8Z+c+qLqfGurPOSFAXMvvKG74CQynMMfGXFOudXjAtqzhDlwqb1y6fh6KKklHovyURTeXvMyXwL/2Q4gWEwYPBSUyfHwx4jTcJLu4JhjGufGQxf5LTF0DgI8aSSLMsSWtqH9vYDCOQHXM7wNkdsStS+uzRVIFUHFO6L/QchnA6Gv6HETcWWUOFiuDfZXns6CDDB4LtMuQy1YeI9RchgQtTBMll7wItWx2u6Se5Tig+TkaeoZu0ZZg1w3zI4EJOFtUt3x1ug3T5zEJsxc19bWghIggitOx6uIaRflxQPOkNLAUSYEIYU6ogA0QbD4FTHQ4BlES0EZcKpDojaEXxAZChAgLqKGAII1yUeQsJihhAuCsANCRUzhHBn5CHkIGqTAQIxcUPIiYdgedwQDIH/IBjyLxyacIi6VronxpO3Tt+xRELqYobQFEs3a+JOCTUEJCKum9sNVNBlRFs4d1vpHVXal2eE9H7GuB4QTohvTpuD47UbJMsUsCTwfRkDX4BBf9BaU3ArErs1QI95ncwLNRk8+/3ren185B5kNclEt41/suaRAOjcf1YImyIqHbtzwC6nBO7efqpwXyYS+R5XnF2+hLyghek0p7gwSae6DaputjTIsUWFtVoLpJOJvGLzJCOIE2yQo0AkXx84S9dwnaC51dqM+zhgajPDRm/MeGaRZke8oIc5FY1DvRoQTPYz2JUVMu72P0cQAQWlB8arF7L3WaK5tL0BRKh3lMIPw3o90a6iQXE6VUqMRoblMoWQkEcC0w05LfM+i6yo8FZU+c9KtbWN6GcuCzva9BEAWf3rR9CDL7l9YVGVe3pVWC7oZ7GZKr/XZLbOh0wj70pJIoNYoxX0qNr8Ny9+jKAa9e+8LdI42v02+kTZRrRieUCnGcTvarYmwV2NfFhdgtaibx6BQYtBx0rA34NSQHBK+7ZxFlEkh7SqPuvK3pXxIGXPHxusLnJRkfSsJPQchBta2YEeaYTp2yvCslG5ii+p8gaPBYlkVfm8Te1rG89OQvC+oJaWt+SRWTadUXavM6rWM4bHXt56dxbCDWXz9ojsfZ09bxH7gvPT0nJYQ2CekE9rkgQvGCOte6bqMoSLT+wTBa9x0np98lUI+sgOcvDCaP3YVuH/BBgAJQtJ2htiV8UAAAAASUVORK5CYII=") 260px 50px no-repeat #fff; }
+.qr-box .qr-l { float: left; width: 120px; text-align: center; word-wrap: break-word; }
+.qr-box .qr-r { float: right; padding: 30px 20px; }
+.qr-box img { border: 3px solid #d9e2f2; }
+.qr-box p { line-height: 20px; font-size: 14px; color: #878787; }
+.qr-box p a { color: #448ef3; }
+/*骞垮憡*/
+.adDiv-all { line-height: 30px; margin-bottom: 10px; }
+.adDiv-all dl { margin-left: 8px }
+.adDiv-all dd { margin-left: 5px }
+.adDiv1 { background: url("//cdn.kuaidi100.com/images/adm/frame_01.gif") no-repeat 330px #FFFAE2 }
+.adDiv2 { background: url("//cdn.kuaidi100.com/images/adm/frame_02.gif") no-repeat 360px #FFFAE2 }
+.adDiv3 { background: url("//cdn.kuaidi100.com/images/adm/frame_03.gif") no-repeat right #FFFAE2 }
+.adDiv4 { background: url("//cdn.kuaidi100.com/images/adm/frame_04.gif") no-repeat 390px #FFFAE2 }
+.adDiv5 { background: url("//cdn.kuaidi100.com/images/adm/frame_04.gif") no-repeat 390px #FFFAE2 }
+.adDiv8 { background: url("//cdn.kuaidi100.com/images/adm/frame_08.gif") no-repeat 360px #FFFAE2 }
+a.but_adm { display: block; line-height: 36px; height: 36px; width: 81px; text-align: center; float: left; margin-right: 15px; background: url("//cdn.kuaidi100.com/images/adm/frame_05.gif") no-repeat; color: #FFF }
+a.but_adm:hover { color: #FFF; text-decoration: underline }
+.comdiv { width: 570px; overflow: hidden }
+/*鍦板浘*/
+.mapBox { float: left; padding-left: 165px; height: 447px; }
+#map { float: left; width: 600px; height: 447px; display: block; position: relative; }
+#map li { display: block; position: absolute; z-index: 2;line-height: 30px; }
+.mapl a { display: inline-block; padding-left: 20px; background: url("//cdn.kuaidi100.com/images/all/map_hover.gif") no-repeat left 10px; }
+.mapl a:hover { background: url("//cdn.kuaidi100.com/images/all/map_hover.gif") no-repeat left -40px; }
+.mapr a { display: inline-block; padding-right: 20px; background: url("//cdn.kuaidi100.com/images/all/map_hover.gif") no-repeat right 10px; }
+.mapr a:hover { background: url("//cdn.kuaidi100.com/images/all/map_hover.gif") no-repeat right -40px; }
+.maptext { float: right; line-height: 22px; width: 360px; margin-left: 10px }
+.maptext a { margin-left: 5px; }
+.rtcom { background: url("//cdn.kuaidi100.com/images/ico_tips.gif") no-repeat left -92px; padding-left: 52px; }
+.div-border .div-h { border-bottom: 1px dashed #CCC; line-height: 30px; font-size: 14px; color: #0F6B99; padding-left: 60px; margin-bottom: 10px; padding-bottom: 5px; background-image: url("//cdn.kuaidi100.com/images/ico_about.gif"); background-repeat: no-repeat; background-position: left -134px; }
+.div-border .div-n { border-bottom: 1px dashed #CCC; line-height: 30px; font-size: 14px; color: #0F6B99; margin-bottom: 10px; padding-bottom: 5px; background-image: url("//cdn.kuaidi100.com/images/ico_about.gif"); background-repeat: no-repeat; background-position: left -95px; padding-left: 22px; }

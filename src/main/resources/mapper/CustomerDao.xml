@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yidu.express.daoXzy.CustomerDao">
+
+    <resultMap id="BaseResultMap" type="com.yidu.express.entity.Customer">
+        <!--@Table customer-->
+        <result property="customerId" column="customer_Id" jdbcType="INTEGER"/>
+        <result property="customerEmail" column="customer_email" jdbcType="VARCHAR"/>
+        <result property="customerPhone" column="customer_phone" jdbcType="VARCHAR"/>
+        <result property="customerPassword" column="customer_password" jdbcType="VARCHAR"/>
+        <result property="customerNickname" column="customer_nickname" jdbcType="VARCHAR"/>
+        <result property="customerSex" column="customer_sex" jdbcType="VARCHAR"/>
+        <result property="customerBirthday" column="customer_birthday" jdbcType="VARCHAR"/>
+        <result property="customerPhoto" column="customer_photo" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          customer_Id, customer_email, customer_phone, customer_password, customer_nickname, customer_sex, customer_birthday, customer_photo
+        from express.customer
+        where customer_Id = #{customerId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          customer_Id, customer_email, customer_phone, customer_password, customer_nickname, customer_sex, customer_birthday, customer_photo
+        from express.customer
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+          customer_Id, customer_email, customer_phone, customer_password, customer_nickname, customer_sex, customer_birthday, customer_photo
+        from express.customer
+        <where>
+            <if test="customerId != null">
+                and customer_Id = #{customerId}
+            </if>
+            <if test="customerEmail != null and customerEmail != ''">
+                and customer_email = #{customerEmail}
+            </if>
+            <if test="customerPhone != null and customerPhone != ''">
+                and customer_phone = #{customerPhone}
+            </if>
+            <if test="customerPassword != null and customerPassword != ''">
+                and customer_password = #{customerPassword}
+            </if>
+            <if test="customerNickname != null and customerNickname != ''">
+                and customer_nickname = #{customerNickname}
+            </if>
+            <if test="customerSex != null and customerSex != ''">
+                and customer_sex = #{customerSex}
+            </if>
+            <if test="customerBirthday != null and customerBirthday != ''">
+                and customer_birthday = #{customerBirthday}
+            </if>
+            <if test="customerPhoto != null and customerPhoto != ''">
+                and customer_photo = #{customerPhoto}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="customerId" useGeneratedKeys="true">
+        insert into express.customer(customer_email, customer_phone, customer_password, customer_nickname, customer_sex, customer_birthday, customer_photo)
+        values (#{customerEmail}, #{customerPhone}, #{customerPassword}, #{customerNickname}, #{customerSex}, #{customerBirthday}, #{customerPhoto})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update express.customer
+        <set>
+            <if test="customerEmail != null and customerEmail != ''">
+                customer_email = #{customerEmail},
+            </if>
+            <if test="customerPhone != null and customerPhone != ''">
+                customer_phone = #{customerPhone},
+            </if>
+            <if test="customerPassword != null and customerPassword != ''">
+                customer_password = #{customerPassword},
+            </if>
+            <if test="customerNickname != null and customerNickname != ''">
+                customer_nickname = #{customerNickname},
+            </if>
+            <if test="customerSex != null and customerSex != ''">
+                customer_sex = #{customerSex},
+            </if>
+            <if test="customerBirthday != null and customerBirthday != ''">
+                customer_birthday = #{customerBirthday},
+            </if>
+            <if test="customerPhoto != null and customerPhoto != ''">
+                customer_photo = #{customerPhoto},
+            </if>
+        </set>
+        where customer_Id = #{customerId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from express.customer where customer_Id = #{customerId}
+    </delete>
+
+</mapper>

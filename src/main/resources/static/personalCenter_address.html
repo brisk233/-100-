@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>收货地址</title>
+    <link rel="stylesheet" href="css/personalCenter/base_v4.css" />
+    <link rel="stylesheet" href="css/personalCenter/account_v4.css" />
+  </head>
+  <body>
+    <style>
+  .w1220 {
+    width: 1220px;
+    margin: 0 auto;
+  }
+  .logo a img {
+    width: 119px;
+  }
+  .head-nav {
+    float: right;
+  }
+  .head-nav > ul > li:before {
+    position: absolute;
+    bottom: -28px;
+    right: 50%;
+    left: 50%;
+    border-top: 2px solid #0082FA;
+    line-height: 0;
+    transition: all .3s;
+    content: '';
+  }
+  .head-nav li.head-nav-select:before, .head-nav li:hover:before {
+    left: 20px;
+    right: 20px;
+  }
+  .head-nav li .badge-tips {
+    position: absolute;
+    top: 9px;
+    right: 0;
+    margin-left: -40px;
+    width: auto;
+    padding: 4px;
+    background: #ff9634;
+    border-radius: 4px;
+    color: #FFF;
+    line-height: 12px;
+    font-size: 11px;
+  }
+  .head-nav li .badge-tips:after {
+    position: absolute;
+    bottom: -3px;
+    left: 10px;
+    border-top: 3px solid #ff9634;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    content: "";
+  }
+  .head-nav > ul > li {
+    margin-right: 0;
+    margin-left: 10px;
+    padding: 0 20px;
+  }
+  .user-box {
+    margin-left: 35px;
+  }
+  .head-nav-select > a, .head-nav-select .ico_triangle, li:hover .ico_triangle {
+    color: #317ee7 !important;
+  }
+  .head-nav ul li .ico_triangle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    margin-left: 10px;
+    margin-top: 4px;
+    border-top: 8px solid;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    content: '';
+  }
+  .head-nav ul li .ico_select {
+    display: none;
+  }
+  </style>
+  <div class="header">
+    <div class="w1220">
+      <div class="logo"><a  href="javascript:;" title="查快递， 寄快递，上快递100"><img src="img/personalCenter/logo.png" alt="快递100" width="142" height="53" /></a></div>
+      <div class="user-box">
+        <div class="head-nav user-info hidden" id="userInfo">
+          <ul>
+          <li><a href="userData.html"><span class="user-img"><img width="35" height="35" id="userImg"></span><span class="user-name" id="userName"></span></a>
+              <ul>
+                <li id="userUrl"></li>
+                <li><a  href="javascript:;">我的寄件订单</a></li>
+                <li><a  href="javascript:;"  >用户中心</a></li>
+                <li><a  href="javascript:;" onclick="logout();return false;">退出</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <span id="welcome" class="sign hidden"><a  href="javascript:;">注册</a><i>|</i><a  href="javascript:;">登录</a></span>
+      </div>
+      <div class="head-nav">
+        <ul>
+          <li id="menu-track"><a  href="HomePage.html" title="查快递， 寄快递，上快递100">首页</a></li>
+          <li  id="menu-person"><a>个人用户</a><i class="ico_triangle"></i>
+            <ul>
+              <li><a  href="javascript:;">产品介绍</a></li>
+              <li><a href="javascript:void(0);" >寄快递</a></li>
+              <li><a  href="javascript:;" >国际快递</a></li>
+              <li><a  href="javascript:;">快递大全</a></li>
+              <li><a  href="javascript:;"  >开放服务</a></li>
+            </ul>
+          </li>
+          <li><a>企业用户</a><i class="ico_triangle"></i>
+            <ul>
+              <li><a  href="javascript:;">快递管家</a></li>
+              <li><a  href="javascript:;"  >企业API</a></li>
+            </ul>
+          </li>
+          <li><a>物流服务商</a><i class="ico_triangle"></i>
+            <ul>
+              <li><a  href="javascript:;"  >快递员收件端</a></li>
+              <li><a  href="javascript:;"  >云打印硬件</a></li>
+              <li><a  href="javascript:;"  >快递公司入驻</a></li>
+            </ul>
+          </li>
+          <li>
+            <a  href="javascript:;" id="menu-api"  >接口(API)</a>
+            <i class="ico_triangle"></i>
+            <ul>
+              <li><a  href="javascript:;"  >产品介绍</a></li>
+              <li><a  href="javascript:;"  >接口申请</a></li>
+              <li><a  href="javascript:;"  >技术文档</a></li>
+              <li><a  href="javascript:;"   >云平台</a></li>
+            </ul>
+          </li>
+          <li><a  href="javascript:;"  >3.5元寄全国</a><span class="badge-tips">商家特惠</span></li>
+        </ul>
+      </div>
+      <div class="box"></div>
+    </div>
+  </div>
+  <div class="hr"></div>
+  
+  
+    <div class="w960 pb20px">
+      <div id="errorTips" class="errorTips hidden"></div>
+      <div class="nav-crumbs">
+        <a href="javascript:;">用户中心</a>&nbsp;&gt;&nbsp;<a href="javascript:;">地址管理</a>
+      </div>
+      <div class="user-main">
+        <div class="info-menu">
+          <ul>
+            <li class="menu-select"><a href="personalCenter_homePage.html">首页</a></li>
+            <li><a href="personalCenter_userData.html">用户资料</a></li>
+            <li><a href="javascript:;">安全中心</a></li>
+            <li><a href="personalCenter_headImgSet.html">头像设置</a></li>
+            <li><a href="personalCenter_address.html">地址管理</a></li>
+            <li><a href="javascript:;">消息提醒</a></li>
+          </ul>
+        </div>
+        <div class="column-2 relative">
+          <div class="table-box">
+            <div class="addrbook-box">
+              <table id="addrbookTable" data-type="2" width="100%">
+                <thead>
+                  <tr>
+                    <th class="col2">姓名</th>
+                    <th class="col3">电话</th>
+                    <th class="col5">地址</th>
+                    <th class="col7">标签</th>
+                    <th class="col4 center">操作</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <div class="table-page" id="addrbookPage"></div>
+            </div>
+          </div>
+          <div id="add-address"><a href="" class="btn-yellow">添加地址</a></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div id="mask">
+      <div class="dialog" style="width: 700px;">
+        <div class="dialog-title">请填写地址信息</div>
+        <i class="dialog-close"></i>
+        <div class="dialog-content">
+          <div class="form-control">
+            <label>地区：</label>
+            <select name="" id="province"></select>
+            <select name="" id="city"></select>
+            <select name="" id="district"></select>
+          </div>
+          <div class="form-control big">
+            <label for="">地址：</label>
+            <input type="text" id="address" placeholder="必填" />
+          </div>
+          <div class="form-control">
+            <label for="">姓名：</label>
+            <input type="text" id="name" placeholder="必填" />
+          </div>
+          <div class="form-control">
+            <label for="">联系电话：</label>
+            <input type="text" id="phone" placeholder="必填" />
+          </div>
+          <div class="form-control">
+            <label for="">固定电话：</label>
+            <input type="text" id="fixphone" placeholder="选填" />
+          </div>
+          <div class="form-control">
+            <label for="">邮编：</label>
+            <input type="text" id="postcode" placeholder="选填" />
+          </div>
+          <div class="form-control"><input type="checkbox" id="isdefault" /> 默认地址</div>
+          <div id="error-message"></div>
+          <div class="form-control handle">
+            <a class="btn-yellow">保存</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mask-dialog" id="delDialog">
+      <div class="dialog">
+        <div class="dialog-title">提示</div>
+        <i class="dialog-close"></i>
+        <div class="dialog-content">
+          <p class="message">确认删除该地址吗？</p>
+        </div>
+        <div class="dialog-footer">
+          <a class="dialog-btn" handle="cancel">取消</a>
+          <a class="dialog-btn" handle="del">确定</a>
+        </div>
+      </div>
+    </div>
+    <style>
+  .footer {
+    height: 340px;
+    padding-top: 75px;
+    background: #02163c;
+    color: #FFF;
+  }
+  .footer .foot-link dt {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFF;
+  }
+  .foot-link, .foot-link a {
+    color: #FFF;
+  }
+  .foot-copyright {
+    padding-top: 25px;
+    margin-top: 50px;
+    border-top: 1px solid #4a4a4a;
+    text-align: center;
+    font-size: 14px;
+  }
+  .foot-copyright a {
+    color: #FFF;
+  }
+  .footer-industry {
+    padding-top: 10px;
+    text-align: center;
+  }
+  .footer-industry li {
+    display: inline-block;
+  }
+  .footer-industry a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(img/personalCenter/sp-index.png) -287px -206px;
+  }
+  .footer-qrcode {
+    float: right;
+  }
+  .footer-code {
+    float: left;
+    margin-left: 30px;
+    width: 123px;
+    text-align: center;
+    font-size: 16px;
+  }
+  .footer-qrcode img {
+    width: 123px;
+    height: 123px;
+    margin-bottom: 16px;
+  }
+</style>
+<div class="fix-box-middle" id="floatCtrl">
+    <i href="#" onclick="gototop();return false;" class="ctrl-btn-1" title="回到顶部"></i>
+    <a target="_blank" class="ctrl-btn-2" title="联系客服" id="uDeskTarget"></a>
+    <a href="javascript:;" class="ctrl-btn-2 ctrl-btn-3" title="手机版（H5站）" id="goH5"></a>
+</div>
+<div class="footer">
+  <div class="w1220">
+    <div class="foot-link">
+      <dl>
+        <dt>了解我们</dt>
+        <dd><a  href="javascript:;"  >关于快递100</a></dd>
+        <dd><a  href="javascript:;"  >新闻资讯</a></dd>
+        <dd><a  href="javascript:;"  >隐私政策</a></dd>
+      </dl>
+      <dl>
+        <dt>关注我们</dt>
+        <dd><a  href="javascript:;">微信公众号</a></dd>
+        <dd><a  href="javascript:;">新浪微博</a></dd>
+        <dd><a  href="javascript:;">100社区</a></dd>
+      </dl>
+      <dl>
+        <dt>联系我们</dt>
+        <dd><a  href="javascript:;"  >联系方式</a></dd>
+        <dd><a  href="javascript:;"  >加入我们</a></dd>
+        <dd><a  href="javascript:;">帮助文档</a></dd>
+      </dl>
+      <dl>
+        <dt>快速通道</dt>
+        <dd><a  href="javascript:;" id="viewH5">手机HTML5站</a></dd>
+        <dd><a  href="javascript:;">快递网点入驻/加盟</a></dd>
+        <dd><a  href="javascript:;">快递网点维护/更新</a></dd>
+      </dl>
+      <ul class="footer-qrcode">
+        <li class="footer-code">
+          <img src="img/personalCenter/qrcode-courier.png" alt="快递员端">
+          <p>快递100收件端</p>
+        </li>
+        <li class="footer-code">
+          <img src="img/personalCenter/qrcode-public.png" alt="关注公众号">
+          <p>快递100</p>
+        </li>
+      </ul>
+        <div class="box"></div>
+    </div>
+    <div class="foot-copyright">
+      深圳前海百递网络有限公司 版权所有&copy;2010-<span id="copyrightYear">2021</span>
+      <script>document.getElementById("copyrightYear").innerHTML = (new Date()).getFullYear();</script>
+      <a  href="javascript:;"   rel="nofollow">粤ICP备14085002号-5</a>
+      <a  href="javascript:;"   rel="nofollow">粤B2-20150010</a>
+    </div>
+    <ul class="footer-industry">
+      <li><a    href="javascript:;" title="深圳市市场监督管理局企业主体身份公示" style="background-position: -287px -206px;width: 16px;height: 17px;" rel="nofollow"></a></li>
+      <li><a   title="可信任网站"  href="javascript:;" style="background-position: -262px -259px;width: 42px;height: 15px;" rel="nofollow"></a></li>
+    </ul>
+    <div class="box"></div>
+  </div>
+</div>
+<div id="updateNotice" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index: 99999;background:rgba(0,0,0,.3);text-align:center;display:none;">
+  <div style="display:inline-block;vertical-align:middle;position:relative;">
+    <div id="noticeClose" style="position: absolute;right: 0;top: -37px;background: url(https://cdn.kuaidi100.com/images/sz/ico_close.png) no-repeat;width: 24px;height: 24px;display: inline-block;cursor: pointer;"><span style="display: block;border-left: 2px solid #fff;height: 14px;content: '';margin-top: 24px;margin-left: 10px;"></span></div>
+    <img src="https://cdn.kuaidi100.com/images/temp/notice_20180803.png" alt="">
+  </div>
+  <span style="display:inline-block;vertical-align:middle;width:0;height: 100%;"></span>
+</div>
+<script>
+(function(a,h,c,b,f,g){a["UdeskApiObject"]=f;a[f]=a[f]||function(){(a[f].d=a[f].d||[]).push(arguments)};g=h.createElement(c);g.async=1;g.charset="utf-8";g.src=b;c=h.getElementsByTagName(c)[0];c.parentNode.insertBefore(g,c)})(window,document,"script","//assets-cli.udesk.cn/im_client/js/udeskApi.js","ud");
+/*ud({
+    "code": "298f17ga",
+    "link": "https://kuaidi100.udesk.cn/im_client/?web_plugin_id=48851",
+    targetSelector: "#uDeskTarget"
+});*/
+function loadUpdate() {
+  var now = (new Date()).getTime(),last = (new Date("2018/08/04 07:00:00")).getTime();
+  var closeTime = getcookie("udpate"),dom = $("#updateNotice"),closeTime = +getcookie("noticeCloseTime");
+  if(now > last || (now - closeTime - 24*3600*1000) < 0) {
+    dom.remove();
+  } else {
+    dom.show();
+  }
+ $("#noticeClose").click(function(event) {
+   setcookie("noticeCloseTime",now);
+   dom.remove();
+ });
+}
+window.onload = function(){
+  loadUpdate();
+}  
+/*document.getElementById("viewH5").addEventListener("click", function() {
+  window.open("https://m.kuaidi100.com?coname=www", '_blank', 'width=375px, height=667px, toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no')
+})*/
+
+function gototop() {
+	acceleration = 0.3;
+	time = 15;
+	var x = 0,
+		y = 0;
+
+	if (document.documentElement) {
+		x = document.documentElement.scrollLeft || 0;
+		y = document.documentElement.scrollTop || 0;
+	}
+
+	var speed = 1 + acceleration;
+	window.scrollTo(x, Math.floor(y / speed));
+	if (y > 0) {
+		var invokeFunction = "gototop()";
+		window.setTimeout(invokeFunction, time);
+	}
+}
+</script>
+ </body>
+</html>

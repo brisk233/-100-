@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="format-detection" content="telephone=no">
+<title>注册成为快递100用户</title>
+<link rel="shortcut icon" href="img/favicon.png"/>
+<link rel="icon" type="image/gif" href="img/favicon.png"/>
+<link rel="stylesheet" href="css/sz/base_v4.css?version=201707271620" />
+<link rel="stylesheet" href="css/sz/login_v5.css?version=201803051820"/>
+<body>
+  <div class="log-head">
+     <img src="img/login_logo_v5.png"/>
+    <h1>创建你的快递100账号</h1>
+  </div>
+  <div class="form-container">
+      <form id="form">
+        <input type="hidden" id="ct" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68;kdcsrftoken:akosT-_KORNZjOqUYJ2iOsqEW7v9Bhg6z1kU7T3DWOo">
+        <div class="form-ctrl" target="phone"><input type="text" placeholder="请输入手机号/邮箱" name="name" id="name" /></div>
+        <div class="form-ctrl hidden" id="phoneValidcode">
+          <input type="text" placeholder="请输入图片验证码" autocomplete="code" />
+          <img height="30" alt="验证码" title="点击刷新验证码" />
+        </div>
+        <div class="form-ctrl" target="phone">
+          <input type="text" placeholder="请输入验证码"  id="code"/>
+          <a id="send">获取验证码</a>
+        </div>
+        <div class="form-ctrl" id="pass" ><input type="password" placeholder="请输入不少于6位密码"/></div>
+      </form>
+      <div id="voice" class="voice" style="display:none;"><a>收不到？试试语音验证码</a></div>
+      <div class="text-warn hidden" id="warn"></div>
+      <button class="btn-submit" id="submit" role="phone">注册</button>
+      <div class="agreement"><i></i>我已阅读并同意<a href="https://www.kuaidi100.com/about/law.shtml" target="_blank">《注册协议》</a>和<a href="https://www.kuaidi100.com/about/private.shtml" target="_blank">《隐私条例》</a></div>
+      <div class="type" id="type">
+        <a role="login" class="fr" id="goLogin" href="login.html">已有账号，去登录</a>
+      </div>
+  </div>
+<script src="js/util/jquery-1.12.1.min.js"></script>
+<script src="js/util/jquery-migrate-1.4.1.min.js"></script>
+<script src="js/share/base_v4.js?version=201802011630"></script>
+<script src="js/user/reg_v6.js?version=202103041530"></script>
+<script src="js/share/count.js?version=201707271620"></script>
+</body>
+</html>

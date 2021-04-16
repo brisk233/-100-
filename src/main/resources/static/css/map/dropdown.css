@@ -1,0 +1,54 @@
+.dropdownDiv {
+  width: 250px;
+  position: relative;
+  vertical-align: top;
+  height: 36px;
+  display: inline-block;
+}
+.dropdownDiv .showname {
+  border: 1px solid #e0e0e0;
+  height: 36px;
+  line-height: 36px;
+  padding: 0px 10px;
+  width: 100%;
+  display: block;
+}
+.dropdownDiv .currentSelectedName {
+    display: inline-block;
+    width: 94%;
+    border: none;
+    padding-left: 0px;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    bottom: 3px;
+}
+.dropdownDiv .down {
+  background: url(../assets/down.png) no-repeat right center;
+  display: inline-block;
+  width: 8px;
+  height: 6px;
+  float: right;
+  position: relative;
+  top: 15px;
+}
+.dropdownDiv .content {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  z-index: 99;
+  background: #fff;
+  display: none;
+  top: 1px;
+  position: relative;
+}
+.dropdownDiv .content .options {
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  width: 100%;
+  padding: 0px 12px;
+  cursor: pointer;
+}
+.dropdownDiv .content .options:hover {
+  background: #F7F7F7;
+}
